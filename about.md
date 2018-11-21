@@ -1,9 +1,9 @@
 ---
 title: Mediumish Template for Jekyll
-layout: page
 comments: true
+layout: page
 ---
 
 # This space intentionally left blank.
 
-It is. Left blank.
+It is. Left blank. 
