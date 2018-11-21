@@ -1,6 +1,6 @@
 ---
-layout: page
 title: Mediumish Template for Jekyll
+layout: page
 comments: true
 ---
 

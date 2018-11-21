@@ -1,8 +1,11 @@
 ---
+title: Praktisk AI, vad är det?
+date: 2018-01-11 00:00:00 Z
+categories:
+- ML
+- AI
 layout: post
-title:  "Praktisk AI, vad är det?"
 author: sal
-categories: [ ML, AI ]
 image: assets/images/11.jpg
 featured: true
 hidden: true
