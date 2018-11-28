@@ -1,7 +1,5 @@
 ---
 title: Praktisk AI
-baseurl: /
-description: The odyssey of Machine Learning landscape.
 timezone: UTC
 collections:
   posts:
@@ -22,4 +20,6 @@ defaults:
     type: pages
   values:
     layout: page
+baseurl: "/"
+description: The odyssey of Machine Learning landscape.
 permalink: pretty
