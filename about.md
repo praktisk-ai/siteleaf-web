@@ -4,4 +4,4 @@ comments: true
 layout: page
 ---
 
-Samlingssajt för artificiell integ
+Samlingssajt för artificiell intelligent
