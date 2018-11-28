@@ -1,5 +1,7 @@
 ---
 title: Praktisk AI
+baseurl: /
+description: The odyssey of Machine Learning landscape.
 timezone: UTC
 collections:
   posts:
