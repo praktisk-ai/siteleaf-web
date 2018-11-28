@@ -1,9 +1,7 @@
 ---
-title: Mediumish Template for Jekyll
+title: Om Praktisk AI
 comments: true
 layout: page
 ---
 
-# This space intentionally left blank.
-
-It is. Left blank. So blank. So very blank.
+Samlingssajt för artificiell integ
