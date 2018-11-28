@@ -21,5 +21,5 @@ defaults:
   values:
     layout: page
 baseurl: "/"
-description: The odyssey of Machine Learning landscape.
+description: This is the description field.
 permalink: pretty
