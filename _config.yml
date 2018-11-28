@@ -24,6 +24,6 @@ plugins:
 - jekyll-paginate
 paginate: 2
 paginate_path: "/page:num/"
-baseurl: ""
+baseurl: ''
 description: praktisk.ai - makininlärmning och artificiell intelligens i praktiken!
 permalink: pretty
