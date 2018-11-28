@@ -6,4 +6,4 @@ layout: page
 
 # This space intentionally left blank.
 
-It is. Left blank. 
+It is. Left blank. So blank. So very blank.
