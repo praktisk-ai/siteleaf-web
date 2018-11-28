@@ -24,8 +24,8 @@ plugins:
 - jekyll-paginate
 paginate: 2
 paginate_path: "/page:num/"
-baseurl: ""
-logo: "assets/images/logo.png"
+baseurl: ''
+logo: assets/images/logo.png
 description: praktisk.ai - makininlärmning och artificiell intelligens i praktiken!
 permalink: pretty
 mailchimp-list: https://praktisk.us19.list-manage.com/subscribe/post?u=392e2c6c1981a5a3b8a802b04&amp;id=eed005ad5a
