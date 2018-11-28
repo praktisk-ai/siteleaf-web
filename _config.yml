@@ -1,13 +1,6 @@
 ---
-## Huvudgrejjer
-
 title: Praktisk AI
 timezone: UTC
-plugins: [jekyll-paginate]
-
-paginate: 2
-paginate_path: /page:num/
-
 collections:
   posts:
     title: Posts
@@ -15,7 +8,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-
 defaults:
 - scope:
     path: ''
@@ -28,6 +20,10 @@ defaults:
     type: pages
   values:
     layout: page
+plugins:
+- jekyll-paginate
+paginate: 2
+paginate_path: "/page:num/"
 baseurl: 
 description: praktisk.ai - makininlärmning och artificiell intelligens i praktiken!
 permalink: pretty
