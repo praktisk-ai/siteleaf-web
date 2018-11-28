@@ -20,6 +20,6 @@ defaults:
     type: pages
   values:
     layout: page
-baseurl: "/"
+baseurl: 
 description: This is the description field.
 permalink: pretty
