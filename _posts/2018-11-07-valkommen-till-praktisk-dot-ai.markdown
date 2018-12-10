@@ -5,6 +5,6 @@ author: Andreas
 featured: true
 ---
 
-This is the first blog post.
+Välkommen! På denna sajt kommer vi att publicera nyheter och artiklar om konkret, praktisk användning av AI direkt från verkligheten. Ibland från våra egna projekt och ibland från andras. Vi tror och hoppas att du kommer hitta mycket kul här!
 
 ![Artificial-intelligence-elon-musk-hawking.jpg](/uploads/Artificial-intelligence-elon-musk-hawking.jpg)
