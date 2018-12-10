@@ -4,4 +4,4 @@ comments: true
 layout: page
 ---
 
-Samlingssajt för artificiell intelligent
+Samlingssajt för artificiell intelligens
