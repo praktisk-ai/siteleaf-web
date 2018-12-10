@@ -6,3 +6,5 @@ featured: true
 ---
 
 This is the first blog post.
+
+![Artificial-intelligence-elon-musk-hawking.jpg](/uploads/Artificial-intelligence-elon-musk-hawking.jpg)
