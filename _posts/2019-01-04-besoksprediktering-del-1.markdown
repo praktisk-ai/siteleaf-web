@@ -4,11 +4,15 @@ date: 2019-01-04 14:59:00 Z
 ---
 
 **Bakgrund**
+
+
 Sommaren 2017 öppnade jag och min fru ett utomhuslekland ([www.lustigalandet.se](http://www.lustigalandet.se)). Under säsongen visade det sig att om vi hade kunnat förutsäga ungefär hur många besökare som skulle komma varje dag skulle många saker underlättats. Skulle det räcka med de sommarjobbare vi tagit in för dagen? Hur många grillkorvar och kanelbullar skulle vi tina? Skulle det att bli kaos på parkeringen om vi inte hade någon som höll koll där?
 
 Att skapa en modell för dessa prediktioner är ett perfekt exempel på vad man kan göra med maskininlärning: man har någon slags mätvärden, tex webbplatsbesök, som man tror kan förutspå något annat, tex fysiska besökare på ett lekland. Sagt och gjort - jag drog igång projektet!
 
 **Målbild**
+
+
 Det första jag gjorde var att fundera ut hur jag skulle vilja att det fungerade om det blev perfekt. Eftersom jag har en Amazon Alexa i köket kändes det naturligt att använda den som gränssnitt mot prediktionerna.
 
 *Söndag kväll.
