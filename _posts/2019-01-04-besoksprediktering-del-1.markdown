@@ -55,6 +55,8 @@ Första delmålet i projektet blev då följande:
 
 Här är en skiss på detta:
 
+**![](https://lh6.googleusercontent.com/yGWc_VRMIUudXEjlDH6Xvb8b5v76sIho_Zi2kxX274Dm_KRfk6qFFVgeRbJxOMMxVchyGD1qUVh4DU8wd79FbgX0-gNrFZqEdDAqIMzyj47kaQhG7TKKi_jX9FRZpjAMM3zYwsHu)**
+
 **Datakällor**
 Via iZettle kunde jag få tag på all rå transaktionsdata. På så vis kunde jag med hjälp av lite “datamassage” få fram min målvariabel - antal besökande barn för en specifik dag.
 
