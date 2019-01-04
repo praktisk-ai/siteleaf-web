@@ -86,34 +86,46 @@ Med dessa ursäkter ur vägen, och med vetskapen om att modellen i alla fall bli
 
 Så här såg besöksgrafen ut för första säsongen - alltså det som jag försökte skapa en modell för.
 
+**![](https://lh6.googleusercontent.com/OfvNHQPDnejawt79t0vNB1ju764nE7JccwpenhLNiEDQuFYaCTmnLKcTRIQEEcrQwipcJgizv8yGPhP-EfP5fx4u-2ODfztH8cvBApd6nb_Fy4ad8c0qZHq2qcRidglQHkYaOiUa)**
+
 Det ser nästan slumpmässigt ut, men det finns en viss stigande trend från och med öppningsdagen fram till sommaren och industrisemestern, för att därefter falla allt eftersom fler och fler börjar jobba igen och sommarlovet är över. De nedåtgående dipparna är mestadels måndagar då det var stängt.
 
 Min första modell blev enkel linjär regression. Det brukar vara en bra idé att bara få igång nåt och se vad som trillar ut. Då har man ett basvärde att jämföra med när man börjar kolla på mer avancerade modeller. Dessutom var ju tanken att få ihop hela systemet först - och därefter iterera fram en bättre och bättre modell.
 
 Några enkla features som jag lade till var exempelvis veckodagar och veckonummer. Därefter lite “idiotkontroller” för att se att datan hänger ihop. Här visas summerat antal besökare per veckodag.
-l
-Noll är förstås måndagar. Tisdagar var generellt populärast.
+
+**![](https://lh6.googleusercontent.com/0hFJsrwmTXZjZpvYN_GeKkWtVBHXOEXjj-xIYfiI94ox3oI6lWiSFER1H8bUlFXI_2FDSA85deCwCbizFEX-8ZG-tgF56UsOPxZjjEe0Xry-AENXZq6EtVCnI5kyIY664801SUV2)**Noll är förstås måndagar. Tisdagar var generellt populärast.
 
 Nedan visas besökare summerat per vecka.
 
-Det ser ut som om semester och sommarlov låg vecka 26 till 32.
+**![](https://lh3.googleusercontent.com/DUKYPwrH3pS6iiwE5GdHWAiXxSCeIS3ceJIYNPyEp-V0HQqyQlW-ndUMmixW0z0svXZsPTc7fGBTd4JdCbmQOnWPdgF3PiAcRnMR84ShKzEgU6sN4_iWmtglZy3cXYiZAsQlp7Mg)**Det ser ut som om semester och sommarlov låg vecka 26 till 32.
 
 Ok, nu åker vi! Med hjälp av en 70-30 train-test-split, linjär regression, datuminformation som enda hjälpmedel för prediktionen, för att sen prediktera på hela datasetet så blev första försöket så här:
 
-Model score (r2): 0.48\
+**![](https://lh6.googleusercontent.com/7h8FUhbrACKQ0qe2ZOqhol5idp6AyRXii01oKHJqcN90D2d4slNktJ12X8td5DEoxuK7dIoX-HvccUAMxbkCg_JWSs1WoyMA34X3Yy87avHN1tYR1HFb_iSlnROoSZI2V80eOO-o)**Model score (r2): 0.48\
 Inte lysande kanske, men för att bara ha haft datumet att utgå ifrån så, tja, på rätt väg.
 
 Om man kollar sambanden mellan några variabler och antal barn (på y-axeln) så ser man att det inte finns någon jättestark korrelation, men ändå lite användbar.
 
+**![](https://lh4.googleusercontent.com/CvGGv9dbkz5dEtybo5L2Ol14X9wd0TCWWaQB7H8Y0NVq1-gpJSiuMG3zxbL5HBDsORwAkiB7WgKN4nrrNxqQHxQobyPPJorSMBxzdMhDKIa31b7qhNd4RYvyH13OKhSzZyz4kHpX)**
+
 På bilden nedan ligger rätt svar på x-axeln och prediktionen på y-axeln. Vid en perfekt prediktion skulle alla prickar legat på linjen. Så det ser lite spretigt ut, men ok för ett första försök.
 
-Ok, vi lägger till Google Analytics data också för att se om det blir bättre. Så här ser GAs antal sessioner ut jämfört med det faktiska antalet besökande barn:
+**![](https://lh4.googleusercontent.com/AOfZtNg-0Yx4GgPzl5vqKqHipXyTX3NOr2l4QgulyDbx-8pYiRMnITud0qwsEOqp_FeBYBnQYUmooKznGRcHmxoDlsvSINDkc5HvWU_MEFCl57hRBSf6q9QXWHUxhglfiTIEqDw6)**Ok, vi lägger till Google Analytics data också för att se om det blir bättre. Så här ser GAs antal sessioner ut jämfört med det faktiska antalet besökande barn:
+
+**![](https://lh5.googleusercontent.com/CUzdhvn7o_KA5o0dpyVR_n0JM91wYHNA3fv01ezXs48LepPgpQe75SEhOBYO4QUZcX4yAA1w-6uC5yyZ7NlI1Sb2h1Z2kLg0U0yXmzdBulVLQOx19ve7oJgxPiI8pbKNA3l4VjW1)**
 
 Så det verkar ju finnas någon slags korrelation. Vi kollar med webbplatsbesök på x-axeln och antal barn på y-axeln:
+
+**![](https://lh3.googleusercontent.com/SQPWSV7RHcaSMUG5kYECDx9io3tsbYQypXl3ZaMDYAn49lrl_v2yGoMjhkzWNuw_u4CMzSPkyul3UNrPR0FzL0WwhoB3FnQMAx3EkoJJuxGcspr5QbMqLBm0MwFPutlOtfLcyCLY)**
 
 Ja, en tydlig korrelation! Det borde hjälpa prediktionen en del!
 
 Efter en ny träningsomgång och prediktion blev det så här:
+
+**![](https://lh3.googleusercontent.com/6tWdzdy76NRRQln9k6tbNusmjbEDXOXLqjGeaXemmjaFAU4FjcWpJfIp6iH-19HC_7ZX2h-zrSYXcRSBsKWjGhpCHg1W1YiEdNn9BpAZoxKzqLhZW8__KPWZXc2e1GXytMvM2BWU)**
+
+**![](https://lh3.googleusercontent.com/naU86JJYHG-4PStXH2T2KonwzHoJ8_XPRLjkkqHM36EpW5MpsBejXWDfSEz3TYSFzjD-awE4-M9QnxhctQsYjs79zkoYc5IEb5H-2c6v-yHRA1gOiRcV2ikvxoNBpW5Yi7gazdkH)**
 
 Model score (r2): 0.56
 
