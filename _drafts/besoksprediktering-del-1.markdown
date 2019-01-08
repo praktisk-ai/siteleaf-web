@@ -147,7 +147,7 @@ När man kollar på hur det blev känns det verkligen som toppen på isberget, i
 
 **Vidareutveckling**
 
-Detta var alltså första “spiken”. Men det finns mycket mer skoj att titta vidare på och som kommer i nästa del av denna artikelserie.
+Detta var alltså första “spiken”. Men det finns mycket mer skoj att titta vidare på och som jag kommer att utforska vidare i kommande delar av denna artikelserie.
 
 * Ytterligare data från säsong 2
 
