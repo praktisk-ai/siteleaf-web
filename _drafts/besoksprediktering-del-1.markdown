@@ -9,7 +9,6 @@ Att skapa en modell för dessa prediktioner är ett perfekt exempel på vad man 
 
 **Målbild**
 
-
 Det första jag gjorde var att fundera ut hur jag skulle vilja att det fungerade om det blev perfekt. Eftersom jag har en Amazon Alexa i köket kändes det naturligt att använda den som gränssnitt mot prediktionerna.
 
 *Söndag kväll.
@@ -37,7 +36,6 @@ Detta är alltså den utopiska målbilen. Nu gäller det bara att omsätta den i
 
 **Planen**
 
-
 Som i alla projekt bygger man inte allt direkt, utan en bra start är ofta att försöka göra en så kallad “spik” - ett komplett fungerande system men där man bara gjort minsta möjliga arbetsinsats i varje ingående del.
 
 Hur konversationen med Alexa ska funka efter första “spiken”:
@@ -62,7 +60,6 @@ Här är en skiss på detta:
 
 **Datakällor**
 
-
 Via iZettle kunde jag få tag på all rå transaktionsdata. På så vis kunde jag med hjälp av lite “datamassage” få fram min målvariabel - antal besökande barn för en specifik dag.
 
 En hypotes för prediktionen var antalet besökare på webbsidan och eftersom vi använder Google Analytics så kunde jag tanka ner denna data relativt enkelt. Nu finns det ju massor med ytterligare parametrar man skulle kunna kolla på, som till exempel antalet sessioner, sessionslängd, återkommande besökare, etc. Men för att hålla det enkelt i denna “spik” så kollade jag alltså endast på det råa antalet besökare på webbsidan.
@@ -71,7 +68,6 @@ En annan hypotes var att det kunde hänga ihop med antalet besökare på Faceboo
 
 **Kända problem**
 
-
 När man jobbar med maskininlärning så finns den några grundregler, som exempelvis att man bör ha en hel del data att träna sin modell på. Ofta är mer bättre. En nedre gräns är kanske tusentals eller eventuellt hundratals exempel. För denna modell hade jag data för ca 2-3 månader, och då hade det dessutom varit stängt på måndagar och lite andra blandade dagar… Så nu vi pratar om runt 60 datapunkter - inte ens med lite god vilja jättemycket underlag.
 
 En annan komplicerande faktor var att verksamheten var nyöppnad. Detta innebär, troligen, att besöksströmmarna inte har stabiliserat sig tillräckligt för att vara något särskilt kvalitativt underlag för en ML-modell.
@@ -79,7 +75,6 @@ En annan komplicerande faktor var att verksamheten var nyöppnad. Detta innebär
 Med dessa ursäkter ur vägen, och med vetskapen om att modellen i alla fall blir bättre för varje säsong så fortsätter vi nu mot det första delmålet.
 
 **ML-modellen**
-
 
 Så här såg besöksgrafen ut för första säsongen - alltså det som jag försökte skapa en modell för.
 
@@ -91,15 +86,15 @@ Min första modell blev enkel linjär regression. Det brukar vara en bra idé at
 
 Några enkla features som jag lade till var exempelvis veckodagar och veckonummer. Därefter lite “idiotkontroller” för att se att datan hänger ihop. Här visas summerat antal besökare per veckodag.
 
-**![](https://lh6.googleusercontent.com/0hFJsrwmTXZjZpvYN_GeKkWtVBHXOEXjj-xIYfiI94ox3oI6lWiSFER1H8bUlFXI_2FDSA85deCwCbizFEX-8ZG-tgF56UsOPxZjjEe0Xry-AENXZq6EtVCnI5kyIY664801SUV2)**Noll är förstås måndagar. Tisdagar var generellt populärast.
+\*\*![](https://lh6.googleusercontent.com/0hFJsrwmTXZjZpvYN_GeKkWtVBHXOEXjj-xIYfiI94ox3oI6lWiSFER1H8bUlFXI_2FDSA85deCwCbizFEX-8ZG-tgF56UsOPxZjjEe0Xry-AENXZq6EtVCnI5kyIY664801SUV2)\*\*Noll är förstås måndagar. Tisdagar var generellt populärast.
 
 Nedan visas besökare summerat per vecka.
 
-**![](https://lh3.googleusercontent.com/DUKYPwrH3pS6iiwE5GdHWAiXxSCeIS3ceJIYNPyEp-V0HQqyQlW-ndUMmixW0z0svXZsPTc7fGBTd4JdCbmQOnWPdgF3PiAcRnMR84ShKzEgU6sN4_iWmtglZy3cXYiZAsQlp7Mg)**Det ser ut som om semester och sommarlov låg vecka 26 till 32.
+\*\*![](https://lh3.googleusercontent.com/DUKYPwrH3pS6iiwE5GdHWAiXxSCeIS3ceJIYNPyEp-V0HQqyQlW-ndUMmixW0z0svXZsPTc7fGBTd4JdCbmQOnWPdgF3PiAcRnMR84ShKzEgU6sN4_iWmtglZy3cXYiZAsQlp7Mg)\*\*Det ser ut som om semester och sommarlov låg vecka 26 till 32.
 
 Ok, nu åker vi! Med hjälp av en 70-30 train-test-split, linjär regression, datuminformation som enda hjälpmedel för prediktionen, för att sen prediktera på hela datasetet så blev första försöket så här:
 
-**![](https://lh6.googleusercontent.com/7h8FUhbrACKQ0qe2ZOqhol5idp6AyRXii01oKHJqcN90D2d4slNktJ12X8td5DEoxuK7dIoX-HvccUAMxbkCg_JWSs1WoyMA34X3Yy87avHN1tYR1HFb_iSlnROoSZI2V80eOO-o)**Model score (r2): 0.48\
+\*\*![](https://lh6.googleusercontent.com/7h8FUhbrACKQ0qe2ZOqhol5idp6AyRXii01oKHJqcN90D2d4slNktJ12X8td5DEoxuK7dIoX-HvccUAMxbkCg_JWSs1WoyMA34X3Yy87avHN1tYR1HFb_iSlnROoSZI2V80eOO-o)\*\*Model score (r2): 0.48\
 Inte lysande kanske, men för att bara ha haft datumet att utgå ifrån så, tja, på rätt väg.
 
 Om man kollar sambanden mellan några variabler och antal barn (på y-axeln) så ser man att det inte finns någon jättestark korrelation, men ändå lite användbar.
@@ -108,7 +103,7 @@ Om man kollar sambanden mellan några variabler och antal barn (på y-axeln) så
 
 På bilden nedan ligger rätt svar på x-axeln och prediktionen på y-axeln. Vid en perfekt prediktion skulle alla prickar legat på linjen. Så det ser lite spretigt ut, men ok för ett första försök.
 
-**![](https://lh4.googleusercontent.com/AOfZtNg-0Yx4GgPzl5vqKqHipXyTX3NOr2l4QgulyDbx-8pYiRMnITud0qwsEOqp_FeBYBnQYUmooKznGRcHmxoDlsvSINDkc5HvWU_MEFCl57hRBSf6q9QXWHUxhglfiTIEqDw6)**Ok, vi lägger till Google Analytics data också för att se om det blir bättre. Så här ser GAs antal sessioner ut jämfört med det faktiska antalet besökande barn:
+\*\*![](https://lh4.googleusercontent.com/AOfZtNg-0Yx4GgPzl5vqKqHipXyTX3NOr2l4QgulyDbx-8pYiRMnITud0qwsEOqp_FeBYBnQYUmooKznGRcHmxoDlsvSINDkc5HvWU_MEFCl57hRBSf6q9QXWHUxhglfiTIEqDw6)\*\*Ok, vi lägger till Google Analytics data också för att se om det blir bättre. Så här ser GAs antal sessioner ut jämfört med det faktiska antalet besökande barn:
 
 **![](https://lh5.googleusercontent.com/CUzdhvn7o_KA5o0dpyVR_n0JM91wYHNA3fv01ezXs48LepPgpQe75SEhOBYO4QUZcX4yAA1w-6uC5yyZ7NlI1Sb2h1Z2kLg0U0yXmzdBulVLQOx19ve7oJgxPiI8pbKNA3l4VjW1)**
 
@@ -133,7 +128,6 @@ Slutligen testade jag även att använda bara webbplatsbesöken för prediktione
 
 **Hämta data från GA**
 
-
 När jag hämtade basedatan för modellträningen hade jag använt ett Python-skript, alltså ville jag köra det igen för att hämta data kontinuerligt. Min plan var att köra detta i en schemalagd AWS Lambda-funktion (serverless) men det var inte helt lätt att få det att funka. Istället blev det plan B, starta en AWS EC2-instans (Linux server) och köra ett cron-jobb som varje timme:
 hämtade GA-data
 gjorde ML-beräkningen enligt min framtagna modell
@@ -141,18 +135,15 @@ Sparade prediktionen till en fil på AWS S3.
 
 **Alexa**
 
-
 Slutligen återstod bara att skapa röstgränssnittet till Alexa. Detta är lite konfiguration plus en AWS Lambda, i TypeScript denna gång, som helt enkelt bara läser min prediktion från s3 och svarar användaren.
 
 **Slutresultatet**
 
-
 När man kollar på hur det blev känns det verkligen som toppen på isberget, inte mycket synligt!
 
-VIDEO
+![Interaction. (1).MOV](/uploads/Interaction.%20(1).MOV)
 
 **Vidareutveckling**
-
 
 Detta var alltså första “spiken”. Men det finns mycket mer skoj att titta vidare på och som kommer i nästa del av denna artikelserie.
 
