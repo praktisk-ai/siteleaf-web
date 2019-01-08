@@ -138,7 +138,8 @@ Sparade prediktionen till en fil på AWS S3.
 Slutligen återstod bara att skapa röstgränssnittet till Alexa. Detta är lite konfiguration plus en AWS Lambda, i TypeScript denna gång, som helt enkelt bara läser min prediktion från s3 och svarar användaren.
 
 
-[Prata med Alexa](https://youtu.be/YRr57bikoDQ)
+[![alexa.png](/uploads/alexa.png)](https://youtu.be/YRr57bikoDQ)
+
 
 **Slutresultatet**
 
