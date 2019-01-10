@@ -30,7 +30,7 @@ Ska jag be henne komma till jobbet direkt nu på morgonen?
 -Ja tack!
 -Ok, jag har skickat ett meddelande till Maria och bett henne komma hit så fort hon kan.*
 
-Lite prediktioner och underlag till dessa, såsom väder, samt direkt lite förslag på åtgärder. Att exempelvis kunna hantera extra personal direkt via Alexa gör att det gjort i samma ögonblick som man accepterar förslaget om att kontakta någon - ingen risk att det glöms bort eller inte hinns med!
+Lite prediktioner och underlag till dessa, såsom väder, samt direkt lite förslag på åtgärder. Att exempelvis kunna hantera extra personal direkt via Alexa gör att det blir gjort i samma ögonblick som man accepterar förslaget om att kontakta någon - ingen risk att det glöms bort eller inte hinns med!
 
 Detta är alltså den utopiska målbilen. Nu gäller det bara att omsätta den i praktiken också!
 
@@ -40,9 +40,8 @@ Som i alla projekt bygger man inte allt direkt, utan en bra start är ofta att f
 
 Hur konversationen med Alexa ska funka efter första “spiken”:
 
-* Hur många besökare kommer det idag?
-
-* Baserat på de senaste 24 timmarnas besök på webbplatsen uppskattar jag att det kommer ca 30 barn idag.
+*-Alexa, hur många besökare kommer det idag?\
+-Baserat på de senaste 24 timmarnas besök på webbplatsen uppskattar jag att det kommer ca 30 barn idag.*
 
 Första delmålet i projektet blev då följande:
 
@@ -137,9 +136,7 @@ Sparade prediktionen till en fil på AWS S3.
 
 Slutligen återstod bara att skapa röstgränssnittet till Alexa. Detta är lite konfiguration plus en AWS Lambda, i TypeScript denna gång, som helt enkelt bara läser min prediktion från s3 och svarar användaren.
 
-
-[![alexa.png](/uploads/alexa.png)](https://youtu.be/YRr57bikoDQ)
-
+![alexa.png](/uploads/alexa.png)
 
 **Slutresultatet**
 
@@ -168,7 +165,6 @@ Detta var alltså första “spiken”. Men det finns mycket mer skoj att titta 
 * Data lag, webbplatsbesök senaste dagarna
 
 * Ignorera extremvärden i datat
-
 
 Prenumerera på nyhetsbrevet för att få veta när nästa del finns att läsa!
 
