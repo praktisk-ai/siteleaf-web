@@ -2,6 +2,7 @@
 title: Besöksprediktering del 1
 date: 2018-12-16 14:59:00 Z
 featured: true
+image: https://lh6.googleusercontent.com/yGWc_VRMIUudXEjlDH6Xvb8b5v76sIho_Zi2kxX274Dm_KRfk6qFFVgeRbJxOMMxVchyGD1qUVh4DU8wd79FbgX0-gNrFZqEdDAqIMzyj47kaQhG7TKKi_jX9FRZpjAMM3zYwsHu
 ---
 
 Sommaren 2017 öppnade jag och min fru ett utomhuslekland ([www.lustigalandet.se](http://www.lustigalandet.se)). Under säsongen visade det sig att om vi hade kunnat förutsäga ungefär hur många besökare som skulle komma varje dag skulle många saker underlättats. Skulle det räcka med de sommarjobbare vi tagit in för dagen? Hur många grillkorvar och kanelbullar skulle vi tina? Skulle det att bli kaos på parkeringen om vi inte hade någon som höll koll där?
@@ -59,7 +60,7 @@ Första delmålet i projektet blev då följande:
 
 Här är en skiss på detta:
 
-**![](https://lh6.googleusercontent.com/yGWc_VRMIUudXEjlDH6Xvb8b5v76sIho_Zi2kxX274Dm_KRfk6qFFVgeRbJxOMMxVchyGD1qUVh4DU8wd79FbgX0-gNrFZqEdDAqIMzyj47kaQhG7TKKi_jX9FRZpjAMM3zYwsHu)**
+![](https://lh6.googleusercontent.com/yGWc_VRMIUudXEjlDH6Xvb8b5v76sIho_Zi2kxX274Dm_KRfk6qFFVgeRbJxOMMxVchyGD1qUVh4DU8wd79FbgX0-gNrFZqEdDAqIMzyj47kaQhG7TKKi_jX9FRZpjAMM3zYwsHu)
 
 **Datakällor**
 
