@@ -22,11 +22,16 @@ Det första jag gjorde var att fundera ut hur jag skulle vilja att det fungerade
 *-Ok, jag har skickat ett meddelande till Maria om att vi eventuellt behöver henne imorgon.*
 
 
+
 *Måndag morgon*
+
 *-Alexa, kommer det mycket folk idag?*
+
 *-Det ser ut att bli bra väder idag och det har varit mer trafik på hemsidan än vanligt igår och nu på morgonen. Enligt mina beräkningar bör det komma runt 130 barn.
 Du bör se till att det finns ca 55 korvar och korvbröd tinade. Jag förvarnade ju Maria om att vi kanske skulle behöva henne idag. Ska jag be henne komma till jobbet direkt nu på morgonen?*
+
 *-Ja tack!*
+
 *-Ok, jag har skickat ett meddelande till Maria och bett henne komma hit så fort hon kan.*
 
 
@@ -40,7 +45,9 @@ Som i alla projekt bygger man inte allt direkt, utan en bra start är ofta att f
 
 Hur konversationen med Alexa ska funka efter första “spiken”:
 
+
 *-Alexa, hur många besökare kommer det idag?*
+
 *-Baserat på de senaste 24 timmarnas besök på webbplatsen uppskattar jag att det kommer ca 30 barn idag.*
 
 
