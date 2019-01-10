@@ -12,22 +12,30 @@ Att skapa en modell för dessa prediktioner är ett perfekt exempel på vad man 
 Det första jag gjorde var att fundera ut hur jag skulle vilja att det fungerade om det blev perfekt. Eftersom jag har en Amazon Alexa i köket kändes det naturligt att använda den som gränssnitt mot prediktionerna.
 
 *Söndag kväll.
+
 -Alexa, kommer det många besökare imorgon?
+
 -Det ser ut att bli bra väder imorgon och det har varit mer trafik på hemsidan än vanligt på sistone.
 Dessutom är det ju ofta mycket folk på måndagar.
 Enligt mina beräkningar bör det komma runt 120 barn.
 Du bör se till att det finns ca 50 korvar och korvbröd tinade.      Enligt schemat finns Maria tillgänglig vid behov och jag kan skicka ett SMS och förvarna henne om du vill. Ska jag göra det?
+
 -Ja, absolut.
+
 -Ok, jag har skickat ett meddelande till Maria om att vi eventuellt behöver henne imorgon.*
 
 *Måndag morgon.
+
 -Alexa, kommer det mycket folk idag?
+
 -Det ser ut att bli bra väder idag och det har varit mer trafik på hemsidan än vanligt igår och nu på morgonen.
 Enligt mina beräkningar bör det komma runt 130 barn.
 Du bör se till att det finns ca 55 korvar och korvbröd tinade.
 Jag förvarnade ju Maria om att vi kanske skulle behöva henne idag.
 Ska jag be henne komma till jobbet direkt nu på morgonen?
+
 -Ja tack!
+
 -Ok, jag har skickat ett meddelande till Maria och bett henne komma hit så fort hon kan.*
 
 Lite prediktioner och underlag till dessa, såsom väder, samt direkt lite förslag på åtgärder. Att exempelvis kunna hantera extra personal direkt via Alexa gör att det blir gjort i samma ögonblick som man accepterar förslaget om att kontakta någon - ingen risk att det glöms bort eller inte hinns med!
@@ -40,7 +48,8 @@ Som i alla projekt bygger man inte allt direkt, utan en bra start är ofta att f
 
 Hur konversationen med Alexa ska funka efter första “spiken”:
 
-*-Alexa, hur många besökare kommer det idag?\
+*-Alexa, hur många besökare kommer det idag?
+
 -Baserat på de senaste 24 timmarnas besök på webbplatsen uppskattar jag att det kommer ca 30 barn idag.*
 
 Första delmålet i projektet blev då följande:
