@@ -22,9 +22,9 @@ defaults:
     layout: page
 plugins:
 - jekyll-paginate
-paginate: 2
+paginate: 3
 paginate_path: "/page:num/"
-baseurl: ''
+baseurl: 
 logo: assets/images/logo.png
 description: praktisk.ai - makininlärning och artificiell intelligens i praktiken!
 permalink: pretty
