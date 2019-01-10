@@ -12,9 +12,13 @@ Att skapa en modell för dessa prediktioner är ett perfekt exempel på vad man 
 Det första jag gjorde var att fundera ut hur jag skulle vilja att det fungerade om det blev perfekt. Eftersom jag har en Amazon Alexa i köket kändes det naturligt att använda den som gränssnitt mot prediktionerna.
 
 *Söndag kväll*
+
 *-Alexa, kommer det många besökare imorgon?*
+
 *-Det ser ut att bli bra väder imorgon och det har varit mer trafik på hemsidan än vanligt på sistone. Dessutom är det ju ofta mycket folk på måndagar. Enligt mina beräkningar bör det komma runt 120 barn. Du bör se till att det finns ca 50 korvar och korvbröd tinade. Enligt schemat finns Maria tillgänglig vid behov och jag kan skicka ett SMS och förvarna henne om du vill. Ska jag göra det?*
+
 *-Ja, absolut.*
+
 *-Ok, jag har skickat ett meddelande till Maria om att vi eventuellt behöver henne imorgon.*
 
 
