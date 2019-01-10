@@ -1,6 +1,7 @@
 ---
 title: Besöksprediktering del 1
 date: 2019-01-04 14:59:00 Z
+featured: true
 ---
 
 Sommaren 2017 öppnade jag och min fru ett utomhuslekland ([www.lustigalandet.se](http://www.lustigalandet.se)). Under säsongen visade det sig att om vi hade kunnat förutsäga ungefär hur många besökare som skulle komma varje dag skulle många saker underlättats. Skulle det räcka med de sommarjobbare vi tagit in för dagen? Hur många grillkorvar och kanelbullar skulle vi tina? Skulle det att bli kaos på parkeringen om vi inte hade någon som höll koll där?
