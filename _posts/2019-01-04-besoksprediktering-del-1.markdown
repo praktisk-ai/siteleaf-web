@@ -168,3 +168,8 @@ Detta var alltså första “spiken”. Men det finns mycket mer skoj att titta 
 * Data lag, webbplatsbesök senaste dagarna
 
 * Ignorera extremvärden i datat
+
+
+Prenumerera på nyhetsbrevet för att få veta när nästa del finns att läsa!
+
+/Tobbe
