@@ -1,6 +1,6 @@
 ---
 title: Besöksprediktering del 1
-date: 2019-01-04 14:59:00 Z
+date: 2018-12-16 14:59:00 Z
 featured: true
 ---
 
