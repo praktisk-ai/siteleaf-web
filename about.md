@@ -6,7 +6,7 @@ layout: page
 
 Vår vision är att hjälpa företag att använda AI/ML i praktiken. 
 
-Från att ta det första steget över den lilla men ibland svåröverstigliga tröskeln in i AI:ns värld, till att definiera och genomföra stora projekt.
+AI/ML kan vara svårt att komma igång med, men med lite hjälp på traven kan vi hjälpa er att hitta de många enkelt lösbara problem som finns i alla företag. Det bästa är att många problem kan lösas väldigt snabbt med hjälp av standardiserade tjänster från exempelvis AWS eller Google. Vi hjälper er hela vägen: från att ta det första steget över den lilla men ibland svåröverstigliga tröskeln in i AI:ns värld, till att definiera och genomföra stora AI-projekt. 
 
 Sajten du besöker just nu är vår samlingssajt för allt intressant inom praktisk artificiell intelligens och maskininlärning.
 
