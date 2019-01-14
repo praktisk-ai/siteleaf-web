@@ -1,6 +1,7 @@
 ---
 title: Tankar om träningsdata
 date: 2019-01-14 23:13:00 +01:00
+image: asd
 ---
 
 I de flesta ML-projekt behövs träningsdata och gärna mycket data. Ibland kan det vara svårt att få fram detta och ibland kan det vara svårt att ens veta vilken data som behövs. 
