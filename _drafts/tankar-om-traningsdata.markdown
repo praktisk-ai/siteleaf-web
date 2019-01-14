@@ -17,7 +17,7 @@ På detta sätt kunde vi initialt hoppa över en massa jobbiga steg som man norm
 
 **Rätt antal träningsexempel**
 
-![histo-bars.png](/uploads/histo-bars.png)
+![histo-bars.png](/uploads/hist-bars.png)
 
 Sagt och gjort, vi skapade grunddata som vi sedan kunde generera transaktionsdata utifrån. Eftersom det var syntetiskt data kunde vi generera exakt hur mycket eller lite data vi behövde och på det sättet även få en uppfattning om hur mycket “riktig” data vi skulle behöva för att uppnå ett visst resultat. Om vi till exempel skulle nöja oss med ett ett kvalitetsmått på 80% kanske det skulle räcka med 1000 exempel, men för att uppnå 90% kanske vi behövde 100.000 exempel. På detta vis kunde vi tidigt bedöma om det ens var teoretiskt möjligt att uppnå det önskvärda kvalitetmåttet baserat på mängden riktigt data som fanns tillgänglig. Om det inte fanns en kund med tillräckligt många transaktioner skulle det troligen inte ens vara lönt att försöka (men kanske inte omöjligt).
 
