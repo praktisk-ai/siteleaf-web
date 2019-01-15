@@ -1,6 +1,7 @@
 ---
 title: Lär dig AI/ML från nätet
 date: 2018-12-02 09:26:00 +01:00
+image: "/uploads/path.jpg"
 ---
 
 Här kommer en länk till en sida med en hel del matnyttigt om man vill lära sig mer om detta spännande område.
