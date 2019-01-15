@@ -13,10 +13,10 @@ Sajten du besöker just nu är vår samlingssajt för allt intressant inom prakt
 ## Skribenter
 Följande personer skriver mer eller mindre regelbundet inlägg och artiklar på denna sajt.
 
-#### Torbjörn Stavenek (https://www.linkedin.com/in/tstavenek)
+#### Torbjörn Stavenek [LinkedIn](https://www.linkedin.com/in/tstavenek)
 AI-arkitekt. IT-arkitekt. Entreprenör.
 
-#### Andreas Vallberg (https://www.linkedin.com/in/andreasvallberg/)
+#### Andreas Vallberg [LinkedIn](https://www.linkedin.com/in/andreasvallberg/)
 AI-arkitekt. IT-arkitekt. Entreprenör.
 
 ## Kontakt
