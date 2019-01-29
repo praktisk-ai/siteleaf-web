@@ -1,6 +1,7 @@
 ---
 title: Mänsklighetens frälsare - en robot som sorterar lego
 date: 2019-01-29 13:41:00 +01:00
+Field name: image
 ---
 
 En pappa som tröttnat på sina (och barnens) stora lådor med osorterat lego.
