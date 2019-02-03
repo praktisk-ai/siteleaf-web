@@ -1,6 +1,7 @@
 ---
 title: Erfarenheter av AWS SageMaker
 date: 2019-02-03 20:05:00 +01:00
+image: "/uploads/awssagemaker.png"
 ---
 
 Just nu jobbar jag med Örebro Universitet där jag hjälper några forskare att flytta in ett projekt i AWS SageMaker.
@@ -19,21 +20,21 @@ Nu hade de redan börjat kolla lite smått på både AWS och SageMaker och var i
 **Fördelar med SageMaker**
 Men tillbaka till SageMaker. När du kör på SageMaker så kan du välja att köra dina vanliga ramverk och algoritmer direkt i notebooken som vanligt (dvs på din notebook ec2-instans), men du kan också välja att starta upp en helt annan maskin att köra träningen på. Detta sker i form av en Docker-container. AWS tillhandahåller ett antal färdiga Docker-images med optimerade versioner av vanliga AI/ML-algoritmer som man enkelt kan använda. Men man har även möjligheten att göra sina egna Docker-images om man till exempel behöver en proprietär algoritm.
 
-
+![awssm.png](/uploads/awssm.png)
 
 En driftsättning funkar på ungefär samma sätt - man väljer en Docker-image (från AWS eller sin egen) och startar upp den och får direkt en API-endpoint. Sånt underlättar, och man har nära till S3 om man nu skulle ha sparat sin träningsdata, eller tränade modell, där.
 
 **Algoritmen**
 Eftersom projektet handlar om objektdetektering så är det alltså algoritmer som identifierar ett eller flera objekt i en bild. Här är ett exempel på ansiktsdetektering.
 
-
+![faces.png](/uploads/faces.png)
 
 
 Algoritmer som man då använder är till exempel YOLO, VGG, Resnet, … Det kommer nya och bättre algoritmer varje år som ett resultat av tävlingen: ILSVRC - ImageNet Large Scale Visual Recognition Challenge (https://en.wikipedia.org/wiki/ImageNet#ImageNet_Challenge). SageMaker ligger lite efter men ibland finns de senaste algoritmerna på AWS Marketplace. I vårt fall med objektdetektering så finns till exempel Inception v3 tillgängligt (https://aws.amazon.com/marketplace/pp/B07KCPVRJ8?qid=1549219794881&sr=0-1&ref_=srh_res_product_title).
 
 I bilden nedan visas mAP vs inference speed, dvs precision vs detekteringshastighet. Helst ska en algoritm ligga i övre vänstra hörnet, dvs snabb och med hög precision. AWS tillhandahåller som standard VGG-16 och Resnet-50 i Docker-images för träning. 
 
-
+![imalgos.png](/uploads/imalgos.png)
 
 **Små steg**
 För att komma igång så letade jag upp en objektdetekterings-notebook från AWS som gjorde ungefär det vi ville göra och fick den att exekvera från början till slut. Det finns otroligt många färdiga notebooks för SageMaker vilket är en bra utgångspunkt för nästan alla projekt.
