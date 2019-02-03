@@ -33,4 +33,4 @@ För att snabbt komma igång med ditt ML-projekt så fundera över om du kan nyt
 
 Detta behöver som sagt var inte vara den slutliga modellen eller ens ett komplett resultat, men om du snabbt kan verifiera att ditt problem troligen går att lösa så är du redan halvvägs igenom projektet! I princip… 
 
-/Tobbe
+/[Tobbe](https://www.linkedin.com/in/tstavenek/)
