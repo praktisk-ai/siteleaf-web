@@ -76,4 +76,4 @@ Ska man bygga sin AI lokalt och sen flytta upp till molnet? Personligen vill jag
 
 Det finns alltså en hel del fördelar med SageMaker. De tillhandahåller optimerade versioner av standardalgoritmerna, man kan enkelt träna på stora maskiner, och driftsätta en modell kan vara i princip en kodrad. Att man kan skapa egna Docker-images är ett plus. På AWS Marketplace kan man hitta mycket kul och slipper uppfinna hjulet igen. Git integrationen är också trevlig. Men det är inte gratis att köra på SageMaker - kanske inga jättesummor så länge man kör på en liten notebook-instans men när man drar igång ett GPU-monster och tränar en vecka så sticker det lätt iväg. Jojo, smakar det så kostar det. Ut och träna dina modeller nu!
 
-/Tobbe
+/[Tobbe](https://www.linkedin.com/in/tstavenek/)
