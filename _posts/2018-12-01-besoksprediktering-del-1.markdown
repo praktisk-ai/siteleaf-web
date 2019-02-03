@@ -180,4 +180,4 @@ Detta var alltså första “spiken”. Men det finns mycket mer skoj att titta 
 
 Prenumerera på nyhetsbrevet för att få veta när nästa del finns att läsa!
 
-/Tobbe
+/[Tobbe](https://www.linkedin.com/in/tstavenek/)
