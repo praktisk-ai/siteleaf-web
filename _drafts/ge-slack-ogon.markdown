@@ -21,14 +21,14 @@ I min första “spik” tänkte jag skicka upp en bild, låta Vision API hitta 
 
 Här kommer en översikt på hur saker hänger ihop:
 
+![ai-slack.jpg](/uploads/ai-slack.jpg)
 
-
-En användare laddar upp en bild till Slack
-Slack skickar ett event via en webhook till min Cloud Function
-Min funktion hämtar bilden från Slack
-Bilden skickas till Cloud Vision för analys och returnerar all text som hittats i bilden
-Min funktion postar tillbaka den hittade texten som ett svar på den uppladdade  bilden
-Användare får en notis om ett nytt inlägg på Slack
+1. En användare laddar upp en bild till Slack
+2. Slack skickar ett event via en webhook till min Cloud Function
+3. Min funktion hämtar bilden från Slack
+4. Bilden skickas till Cloud Vision för analys och returnerar all text som hittats i bilden
+5. Min funktion postar tillbaka den hittade texten som ett svar på den uppladdade  bilden
+6. Användare får en notis om ett nytt inlägg på Slack
 
 Om man tittar på bilden ovan så är det ganska mycket pilar och streck, mycket integrationer. Men om man försöker hitta “min” AI-del, så består den bara av starten på pil 4 - dvs “AI by integration”! Så i hela denna implementation där jag “gett Slack ögon” så består AI-delen av ett enda API-anrop. Det låter väl inte så svettigt?! 
 
@@ -47,7 +47,7 @@ Anropet till Vision API:et var i princip bara att aktivera API:et, skapa en API-
 **Resultatet**
 Så vad har vi nu då - jo, kolla in videon nedan.
 
-https://youtu.be/n5DlVr-s894
+[Video](https://youtu.be/n5DlVr-s894)
 
 
 **Framåt**
@@ -56,6 +56,7 @@ Sen kanske man vill addera ett anrop till AWS Rekognition för att göra samma a
 
 **Summering**
 Nu vet du alltså hur man med enkla medel kan lägga till intelligens till sin applikation. Sätt igång!
+
 
 Torbjörn Stavenek
 
