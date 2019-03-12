@@ -5,6 +5,7 @@ tags:
 - serverless
 - vision
 - gcp
+image: "/uploads/slack.png"
 ---
 
 I denna artikel tänkte jag diskutera olika nivåer av AI-programmering samt visa hur man enkelt kan göra Slack lite mer intelligent genom att lägga till motsvarigheten till ett par ögon - AI. Jag kommer att gå igenom hur man kan få till en enkel bildanalys med hjälp av GCP Cloud Functions och Googles Vision API på en bild man lagt upp på Slack.
