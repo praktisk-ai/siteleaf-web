@@ -5,9 +5,7 @@ date: 2019-03-12 20:06:00 +01:00
 
 I denna artikel tänkte jag diskutera olika nivåer av AI-programmering samt visa hur man enkelt kan göra Slack lite mer intelligent genom att lägga till motsvarigheten till ett par ögon - AI. Jag kommer att gå igenom hur man kan få till en enkel bildanalys med hjälp av GCP Cloud Functions och Googles Vision API på en bild man lagt upp på Slack.
 
-
-
-
+![slack.png](/uploads/slack.png)
 
 **Nivåer**
 En sak som jag vill sprida till fler är de olika tillgängliga nivåerna av AI-programmering: API, bibliotek och grundforskning. AI behöver inte innebära att man sysslar med “bleeding edge”-forskning eller vet exakt hur alla algoritmer funkar, utan det kan räcka med ett API-anrop för att få tillgång till ett system som tränats av de vassaste företagen i världen. Jag tycker att man i sin första “spik” av ett system alltid ska börja med den översta nivån - dvs låt AI-implementationen bestå av ett API-anrop. Kanske räcker det för den funktionalitet man vill ha? Eller så kanske det räcker för att få ett system som är tillräckligt bra för att utvärdera och veta om man ska gå vidare eller inte. Dessutom finns det liknande API:er hos olika företag men som funkar lite olika bra på olika saker. Bildanalys via API erbjuds ju av exempelvis både Google, AWS och Azure. Alla större plattformar supportar också HTTP REST mot sina AI-lösningar och den mesta funktionaliteten erbjuds dessutom ofta via en SDK för flera olika språk. Då blir det busenkelt att koppla ihop saker!
