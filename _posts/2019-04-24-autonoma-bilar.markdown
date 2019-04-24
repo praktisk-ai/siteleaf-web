@@ -11,4 +11,4 @@ Att bygga teknologi för att få en bil att styra själv har länge varit en dr�
 
 Här är direkt länk in i klippet där https://twitter.com/karpathy som redogör i detalj för hur de har byggt sin teknologi. Otroligt intressant!
 
-https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6726
+[](https://www.youtube.com/watch?v=Ucp0TTmvqOE&feature=youtu.be&t=6726)
