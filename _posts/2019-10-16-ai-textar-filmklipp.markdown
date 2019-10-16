@@ -1,6 +1,7 @@
 ---
 title: AI textar filmklipp
 date: 2019-10-16 10:21:00 +02:00
+image: "/uploads/morph.png"
 ---
 
 Min senaste upptäckt bland bolag som använder AI heter screen9. De har en platform för video: redigering, managering, etc. De verkar även ha haft möjlighet att manuellt texta filmer som hanteras av plattformen tidigare, men nu har de automatiserat detta mha AI. De räknar med att man på detta sätt inte längre behöver lägga 8 timmar redigering per timme film, utan bara 1 timme! 
