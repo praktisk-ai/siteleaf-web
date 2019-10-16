@@ -13,3 +13,4 @@ I framtiden ser de även flera andra funktioner de skulle vilja nyttja, tex för
 
 Det är så här man bygger in AI i sina system på ett snabbt och flexibelt sätt. Bra jobbat screen9!
 
+Torbjörn Stavenek
