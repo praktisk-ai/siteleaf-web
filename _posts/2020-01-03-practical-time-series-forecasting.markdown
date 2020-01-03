@@ -1,6 +1,7 @@
 ---
 title: Practical time series forecasting
 date: 2020-01-03 19:43:00 +01:00
+image: "/uploads/cball.jpg"
 ---
 
 **Intro**
@@ -11,7 +12,7 @@ In this article I will discuss how to work through a time series forecasting pro
 
 **What is a time series?**
 
-In this article when I discuss a time series I basically mean a list of rows where each row is a date and an associated value. Basically it looks like this:
+In this article when I discuss a time series I mean a list of rows where each row is a date and an associated value. It looks like this:
 
 `
 1972-05,	4618
@@ -36,9 +37,7 @@ When doing experimentation on new algorithms or services I like to use a known d
 (You can get the dataset here: https://raw.githubusercontent.com/jbrownlee/Datasets/master/monthly_champagne_sales.csv
 )
 
-GRAF
-
-TABLE HEAD
+![champ.png](/uploads/champ.png)
 
 
 
@@ -116,7 +115,7 @@ Keras is a framework that provides some nice high-level constructs on top of e.g
 
 Now starts the creative phase where you have to come up with features like lag, date information, moving averages, trends, etc. The big promise of NNs are that they should *not* require a great deal of feature engineering, but should discover the patterns themselves. However, they need a bit of TLC before they actually do what you want. For instance the data sometimes need normalization to work optimally. You also need to find a network architecture that has the ability to capture whatever patterns your data is hiding. How many layers should you use? How many hidden nodes?
 
-Contrast this with e.g. RandomForests where you basically do no preprocessing of the data at all - and you can still achieve impressive results. Although RFs still require creative features to have something to work with - the more the better! 
+Contrast this with e.g. RandomForests where you normally do no preprocessing of the data at all - and you can still achieve impressive results. Although RFs still require creative features to have something to work with - the more the better! 
 
 After this you have to run hyperparameter search across the knobs in your NN that you think are important, like layers, training time, features to include, etc. 
 
