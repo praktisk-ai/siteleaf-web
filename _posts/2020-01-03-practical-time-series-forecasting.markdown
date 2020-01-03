@@ -93,8 +93,9 @@ Now we will have to do some more work to get some even better baselines, but sti
 
 Prophet is a nice forecasting framework from Facebook (https://facebook.github.io/prophet/) that in a few lines of code and very fast gets you yet another baseline. For this dataset I got RMSE=1500. So much better than the simple baselines but not as good as the one from the article. This is normally to be expected since someone has actually done some manual tweaking to get the number on the article. But say we did not have the article - then we would now have cut the other simple baselines in half (from about 3000). So this is still a good tool to know about and try out.
 
+![prophet.png](/uploads/prophet.png)
 
-**AWS Forecast **
+**AWS Forecast**
 
 AWS has a long tradition of using ML and especially forecasting for their large product catalog. They also provide this functionality as a separate service called AWS Forecast (https://aws.amazon.com/forecast). Just create a datafile that you upload to S3 and then you can start training and generating predictions. One note about this service though - it is kind of slow. My guess is that it spins up AMIs for all activities in the background. Apart from that this is a good remote service and resembles SageMaker Studio in a lot of conceptual ways.
 
@@ -135,7 +136,11 @@ There is quite a bit more setup to do when using fast.ai libraries, but it is wo
 
 Hyperparameter searching can become a big task using fast.ai because of all the tweakable parameters. This is basically a good thing but can be a bit overwhelming. You just have to start tweaking and eventually you will get a feeling for what seems to be good parameters to change. Or you just code the resource intensive hypersearch right away and kick it off.
 
-What I finally ended up with here was RMSE=228, which translates to about 5% error for a prediction. Pretty good actually! So now we won’t be losing any more sleep over future champagne sales! 
+What I finally ended up with here was RMSE=117, which translates to about 1% error for a prediction. Pretty nice! 
+
+![fastai.png](/uploads/fastai.png)
+
+Of course the real trial by fire of this model comes when we evaluate it on the test set, the hold-out data the model has not yet seen. But that is another story... Anyway, now we won’t be losing any more sleep over future champagne sales! 
 
 
 
