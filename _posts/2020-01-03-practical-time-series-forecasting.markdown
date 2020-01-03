@@ -137,11 +137,15 @@ There is quite a bit more setup to do when using fast.ai libraries, but it is wo
 
 Hyperparameter searching can become a big task using fast.ai because of all the tweakable parameters. This is basically a good thing but can be a bit overwhelming. You just have to start tweaking and eventually you will get a feeling for what seems to be good parameters to change. Or you just code the resource intensive hypersearch right away and kick it off.
 
-What I finally ended up with here was RMSE=117, which translates to about 1% error for a prediction. Pretty nice! 
+What I finally ended up with here was RMSE=???, which translates to about ???% error for a prediction. Pretty nice! 
 
 ![fastai.png](/uploads/fastai.png)
 
-Of course the real trial by fire of this model comes when we evaluate it on the test set, the hold-out data the model has not yet seen. But that is another story... Anyway, now we won’t be losing any more sleep over future champagne sales! 
+**Summary**
+
+We started out by our simple baselines with RMSE around 3000. Got the free one from the article of 924. But this will obviously not happen in the real world. Then we used some off-the-shelf products to get a feel for how good we could get the predictions and landed on 1500 from Prophet and 1030 from AWS FC. A simple NN gave us 834, and when the smoke cleared fast.ai was the winner with ???
+
+Of course the real trial by fire of the chosen model comes when we evaluate it on the test set, the hold-out data the model has not yet seen. But that is another story... Anyway, now we won’t be losing any more sleep over future champagne sales! 
 
 
 
