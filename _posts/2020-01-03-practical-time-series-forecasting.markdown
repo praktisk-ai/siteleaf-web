@@ -65,13 +65,14 @@ Every baseline is like a new personal best for the dataset - the accuracy number
 So running some simple calculations we find these metrics:
 
 * Mean, RMSE=2967
-GRAF
-
 * Median, RMSE=3170
-GRAF
+
+![b1-ddfa6d.png](/uploads/b1-ddfa6d.png)
 
 * Previous value, RMSE=3186
-GRAF
+
+![b2.png](/uploads/b2.png)
+
 
 These baselines are off by about 40%, which is not great. 
 
@@ -98,6 +99,10 @@ Prophet is a nice forecasting framework from Facebook (https://facebook.github.i
 AWS has a long tradition of using ML and especially forecasting for their large product catalog. They also provide this functionality as a separate service called AWS Forecast (https://aws.amazon.com/forecast). Just create a datafile that you upload to S3 and then you can start training and generating predictions. One note about this service though - it is kind of slow. My guess is that it spins up AMIs for all activities in the background. Apart from that this is a good remote service and resembles SageMaker Studio in a lot of conceptual ways.
 
 I allowed AWS FC to pick algorithm itself and it chose ARIMA among 5 different ones tested. The achieved performance with default settings yielded RMSE=1030. Better than Prophet and almost as good as the handcoded ARIMA from the article. So also a quite good result here.
+
+This is what the AWS FC predictions look like:
+
+![fc-pred.png](/uploads/fc-pred.png)
 
 
 **AWS SageMaker Studio**
