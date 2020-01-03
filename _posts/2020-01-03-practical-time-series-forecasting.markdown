@@ -14,11 +14,15 @@ In this article I will discuss how to work through a time series forecasting pro
 
 In this article when I discuss a time series I mean a list of rows where each row is a date and an associated value. It looks like this:
 
->1972-05,	4618
->1972-06,	5312
->1972-07,	4298
->1972-08,	1413
->1972-09,	5877
+1972-05,	4618
+
+1972-06,	5312
+
+1972-07,	4298
+
+1972-08,	1413
+
+1972-09,	5877
 
 
 **Predictability**
