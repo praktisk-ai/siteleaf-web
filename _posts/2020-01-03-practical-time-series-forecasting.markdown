@@ -16,10 +16,15 @@ In this article when I discuss a time series I mean a list of rows where each ro
 
 `
 1972-05,	4618
+
 1972-06,	5312
+
 1972-07,	4298
+
 1972-08,	1413
+
 1972-09,	5877
+
 `
 
 
