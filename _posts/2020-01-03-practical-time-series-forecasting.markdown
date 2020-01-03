@@ -98,7 +98,7 @@ Prophet is a nice forecasting framework from Facebook (https://facebook.github.i
 
 AWS has a long tradition of using ML and especially forecasting for their large product catalog. They also provide this functionality as a separate service called AWS Forecast (https://aws.amazon.com/forecast). Just create a datafile that you upload to S3 and then you can start training and generating predictions. One note about this service though - it is kind of slow. My guess is that it spins up AMIs for all activities in the background. Apart from that this is a good remote service and resembles SageMaker Studio in a lot of conceptual ways.
 
-The achieved performance with default settings yields RMSE=
+I allowed AWS FC to pick algorithm itself and it chose ARIMA among 5 different ones tested. The achieved performance with default settings yielded RMSE=1030. Better than Prophet and almost as good as the handcoded ARIMA from the article. So also a quite good result here.
 
 
 **AWS SageMaker Studio**
