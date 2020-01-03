@@ -131,7 +131,7 @@ There is quite a bit more setup to do when using fast.ai libraries, but it is wo
 
 Hyperparameter searching can become a big task using fast.ai because of all the tweakable parameters. This is basically a good thing but can be a bit overwhelming. You just have to start tweaking and eventually you will get a feeling for what seems to be good parameters to change. Or you just code the resource intensive hypersearch right away and kick it off.
 
-What I finally ended up with here was RMSE=228, which translates to about 5% error for a prediction. Pretty good actually! So now we won’t be losing anymore sleep over future champagne sales! 
+What I finally ended up with here was RMSE=228, which translates to about 5% error for a prediction. Pretty good actually! So now we won’t be losing any more sleep over future champagne sales! 
 
 
 
