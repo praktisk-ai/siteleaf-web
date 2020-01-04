@@ -137,7 +137,10 @@ There is a bit more setup to do when using the fast.ai libraries, but it is wort
 
 Hyperparameter searching can become a big task using fast.ai because of all the tweakable parameters. This is a good thing but can be a bit overwhelming. You just have to start tweaking and eventually you will get a feeling for what seems to be good parameters. Or you just code up the resource intensive hypersearch right away and kick it off. About feature engineering, I kept it to a minimum and used only two years of lag data and the current month as features. 
 
-What I finally ended up with here was RMSE=426, which translates to about 8% error for a prediction. Pretty nice! 
+What I finally ended up with here was RMSE=426, which translates to about 8% error for a prediction. Pretty nice! This is what it looks like:
+
+![fastai2.png](/uploads/fastai2.png)
+
 
 
 **Summary**
