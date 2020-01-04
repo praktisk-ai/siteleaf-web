@@ -4,8 +4,6 @@ date: 2020-01-03 19:43:00 +01:00
 image: "/uploads/cball.jpg"
 ---
 
-**Intro**
-
 Time series forecasting shows up in many different problems. It could be to forecast sales of a specific product, total sales for a whole chain of stores, product price changes, electricity consumption, volume of car rentals, visitors to a store, etc. 
 
 In this article I will discuss how to work through a time series forecasting problem from a practical point of view. The reader is expected to know the principles of AI/ML and to be extremely interested in time series forecasting! 
