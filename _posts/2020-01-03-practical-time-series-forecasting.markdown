@@ -133,19 +133,18 @@ I used only a basic NN for this example with one and two hidden layers including
 
 Fast.ai also provides a high-level library, and with up to date implementations of almost every new idea that pops up in the AI community. Currently it sits on top of PyTorch. So using this library you get a lot of functionality for free, especially when it comes to optimizing and improving NN training. This includes learning rate, dropouts, categorical features, momentum, batch normalization, etc. It also gives you the ability to tweak them all!
 
-There is quite a bit more setup to do when using fast.ai libraries, but it is worth it as we shall see.
+There is a bit more setup to do when using the fast.ai libraries, but it is worth it as we shall see.
 
-Hyperparameter searching can become a big task using fast.ai because of all the tweakable parameters. This is basically a good thing but can be a bit overwhelming. You just have to start tweaking and eventually you will get a feeling for what seems to be good parameters to change. Or you just code the resource intensive hypersearch right away and kick it off.
+Hyperparameter searching can become a big task using fast.ai because of all the tweakable parameters. This is a good thing but can be a bit overwhelming. You just have to start tweaking and eventually you will get a feeling for what seems to be good parameters. Or you just code up the resource intensive hypersearch right away and kick it off. About feature engineering, I kept it to a minimum and used only two years of lag data and the current month as features. 
 
-What I finally ended up with here was RMSE=???, which translates to about ???% error for a prediction. Pretty nice! 
+What I finally ended up with here was RMSE=426, which translates to about 8% error for a prediction. Pretty nice! 
 
-![fastai.png](/uploads/fastai.png)
 
 **Summary**
 
-We started out by our simple baselines with RMSE around 3000. Got the free one from the article of 924. But this will obviously not happen in the real world. Then we used some off-the-shelf products to get a feel for how good we could get the predictions and landed on 1500 from Prophet and 1030 from AWS FC. A simple NN gave us 834, and when the smoke cleared fast.ai was the winner with ???
+We started out by our simple baselines with RMSE around 3000. Got the free one from the article of 924, but this will obviously not happen in the real world. Then we used a few off-the-shelf products to get a feel for how good we could get the predictions and landed on 1500 from Prophet and 1030 from AWS FC. A simple NN gave us 834, and when the smoke cleared fast.ai was the winner with 426.
 
-Of course the real trial by fire of the chosen model comes when we evaluate it on the test set, the hold-out data the model has not yet seen. But that is another story... Anyway, now we won’t be losing any more sleep over future champagne sales! 
+Of course the real trial by fire of the chosen model comes when we evaluate it on the test set, i.e. the hold-out data the model has not yet seen. But that is another story... Anyway, now we won’t be losing any more sleep over future sales. Bring the champagne!
 
 
 
