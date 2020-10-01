@@ -1,7 +1,6 @@
 ---
 title: About praktisk.ai
 date: 2020-10-01 15:54:00 +02:00
-permalink: "/about"
 ---
 
 Our vision is to help companies to understand and make use of Machine Learning and AI in real-word applications. 
