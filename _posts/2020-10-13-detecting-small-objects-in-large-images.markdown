@@ -12,11 +12,12 @@ In one of our projects we get source data as large PDF-files. The objective is t
 As always we start by enumerating a bunch of possible solutions, always going from the quick and easy all the way down to the manually implemented stuff.  The complete solution implemented as a proprietary piece of software we really want to avoid as much as possible. Why? Because although it can be tailored to your exact problem it also comes with a cost, the cost of operations and maintenance.
 
 
-# The layers of the AI-stack 
+# The layers of the AI-stack
 So what options do we have when it comes to finding these small objects? First of all it is a standard object detection problem. This is a known and well-researched problem. So there is a good chance we should be able to find a simple high-level solution. Here is our list of things to look into.
 
 
 **Object detection as a service**
+
 The first thing we should look into is if any of the big players (AWS, GCP, Azure) has anything useful offered as a service. Here are some options:
 
 * AWS Rekognition
@@ -26,6 +27,7 @@ The first thing we should look into is if any of the big players (AWS, GCP, Azur
 In this case we need to locate custom objects, not just cats, dogs or people with glasses. So the most high-level services we cannot use, because they are trained to find only cats, dogs and people with glasses. Basically.
 
 **AutoML**
+
 The next level to look into is the AutoML offerings. Here are the options:
 
 * AWS Rekognition Custom Labels
@@ -38,6 +40,7 @@ Google’s version of this is called AutoML Vision Object Detection and basicall
 Although this is called AutoML there is a lot of data pre-processing required to be able to use this for our case. We need first to convert the PDF to an image, then annotate it, and finally prepare the data in a format, size and structure that the AutoML product requires. As I also found out using these tools - the training is very slow. When you finally get the results there might be something you missed and you have to start over again. This makes the turnaround time very slow and you better have some other project to work on while you wait for the training to finish.
 
 **The simple frameworks**
+
 But wait, didn’t I just say this is a known and well researched problem? Well, yes… So we should be able to find some simple framework to try it out in “5 lines of code” ? We should. But in reality there exists only a few **that** simple-to-use frameworks. One of them is Detecto.
 
 ![detecto.gif](/uploads/detecto.gif)
@@ -49,6 +52,7 @@ This is the “5 lines of code” complexity I expect of a good framework in thi
 
 
 **The complex frameworks**
+
 When you need to go even deeper and really get to State of The Art models here are some bleeding edge models to try out. Be warned though that at this level of the AI-stack you better know what you are doing, love to read research papers and handle library version conflicts. 
 
 * [AWS Object Detection Estimator ](https://github.com/aws/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_image_json_format.ipynb)
@@ -64,6 +68,7 @@ When you need to go even deeper and really get to State of The Art models here a
 
 
 **From the ground up**
+
 No one should build their own object detection neural network from scratch. This is research territory. Also this means you normally cannot take advantage of transfer learning as you do when using an existing architecture. So no. Go away.
 
 
@@ -108,19 +113,19 @@ We run into some of the same problems with our large original images, but we now
 
 All that remains now is some “small” operational plumbing:
 
-How can the customer send in PDFs
-How can we trigger pre-processing
-Where is the pre-processing deployed
-How can we pass data to our model to do inferencing
-Where is the model deployed
-How do we retrain the model
-How do we monitor the model (concept drift)
-How do we monitor the system
-Where do we do post-processing
-How do we deliver the results back to the customer
-How do we orchestrate this entire flow
-Can the system scale
-How do we track and collect usage
+* How can the customer send in PDFs
+* How can we trigger pre-processing
+* Where is the pre-processing deployed
+* How can we pass data to our model to do inferencing
+* Where is the model deployed
+* How do we retrain the model
+* How do we monitor the model (concept drift)
+* How do we monitor the system
+* Where do we do post-processing
+* How do we deliver the results back to the customer
+* How do we orchestrate this entire flow
+* Can the system scale
+* How do we track and collect usage
 
 These could all be topics for future posts.
 
