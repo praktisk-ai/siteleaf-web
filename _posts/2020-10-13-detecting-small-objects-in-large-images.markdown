@@ -4,8 +4,6 @@ date: 2020-10-13 15:18:00 +02:00
 image: "/uploads/little-dog-and-big-dog.jpg"
 ---
 
-![little-dog-and-big-dog.jpg](/uploads/little-dog-and-big-dog.jpg)
-
 In this post I write about a use case where we wanted to detect small objects in very large images. I discuss the various abstraction layers in the AI-stack and when each is appropriate to use. For each AI-layer I also list some of the available options and commercial offerings, all from the perspective of the selected use case.
 
 # Background
@@ -44,7 +42,8 @@ But wait, didn’t I just say this is a known and well researched problem? Well,
 
 ![detecto.gif](/uploads/detecto.gif)
 
-https://medium.com/pytorch/detecto-build-and-train-object-detection-models-with-pytorch-5f31b68a8109
+[Model trained with Detecto](https://medium.com/pytorch/detecto-build-and-train-object-detection-models-with-pytorch-5f31b68a8109)
+
 
 This is the “5 lines of code” complexity I expect of a good framework in this “mature” ML area. It is built on top of PyTorch and for simple use cases this is perfect. It also lets you go deeper when needed. You yourself control how much you want to train it and see progress. We get fast turnaround so we can tinker and test and iterate! Cool.
 
@@ -52,20 +51,16 @@ This is the “5 lines of code” complexity I expect of a good framework in thi
 **The complex frameworks**
 When you need to go even deeper and really get to State of The Art models here are some bleeding edge models to try out. Be warned though that at this level of the AI-stack you better know what you are doing, love to read research papers and handle library version conflicts. 
 
-AWS Object Detection Estimator 
-https://github.com/aws/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_image_json_format.ipynb
+* [AWS Object Detection Estimator ](https://github.com/aws/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_image_json_format.ipynb)
 
-Facebook Detectron2
-https://github.com/facebookresearch/detectron2
+* [Detectron2](https://github.com/facebookresearch/detectron2)
 
-Facebook Detr
-https://github.com/facebookresearch/detr
+* [Detr](https://github.com/facebookresearch/detr)
 
-MMDetection
-https://github.com/open-mmlab/mmdetection
+* [MMDetection](https://github.com/open-mmlab/mmdetection)
 
-SimpleDet
-https://github.com/tusimple/simpledet
+* [SimpleDet](https://github.com/tusimple/simpledet)
+
 
 
 **From the ground up**
@@ -104,10 +99,10 @@ This is of course depending on the very limited number of images and annotations
 # Revisit the problem
 With this new knowledge of the problem we talked some more to the customer. Turns out we only need to locate small snippets of text to start with, not actual pictures of things. Hmm. This makes our problem a lot more confined and maybe we can even move up the AI-stack! Time to try some of the “text detection” offerings. Many candidates are available for this problem:
 
-AWS Rekognition
-AWS Textract
-Google Vision API
-Azure Computer Vision
+* AWS Rekognition
+* AWS Textract
+* Google Vision API
+* Azure Computer Vision
 
 We run into some of the same problems with our large original images, but we now already know how to solve it by splitting. Sending in some of our image parts works pretty well. This is great news because we always want to create the simplest possible solution. Some other minor problems popped up using this new way to solve our detection problem, but generally we now have a solution to our core problem. Yay!
 
