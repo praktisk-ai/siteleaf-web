@@ -13,7 +13,7 @@ As always we start by enumerating a bunch of possible solutions, always going fr
 
 
 # The layers of the AI-stack
-So what options do we have when it comes to finding these small objects? First of all it is a standard object detection problem. This is a known and well-researched problem. So there is a good chance we should be able to find a simple high-level solution. Here is our list of things to look into.
+So what options do we have when it comes to finding these small objects? First of all it is a standard object detection problem. This is a known and well-researched problem. So there is a good chance we should be able to find a simple high-level solution. Here is our list of things to look into which also happens to be the layers of the AI-stack:
 
 
 **Object detection as a service**
@@ -57,9 +57,9 @@ When you need to go even deeper and really get to State of The Art models here a
 
 * [AWS Object Detection Estimator ](https://github.com/aws/amazon-sagemaker-examples/blob/master/introduction_to_amazon_algorithms/object_detection_pascalvoc_coco/object_detection_image_json_format.ipynb)
 
-* [Detectron2](https://github.com/facebookresearch/detectron2)
+* [Facebook Detectron2](https://github.com/facebookresearch/detectron2)
 
-* [Detr](https://github.com/facebookresearch/detr)
+* [Facebook Detr](https://github.com/facebookresearch/detr)
 
 * [MMDetection](https://github.com/open-mmlab/mmdetection)
 
