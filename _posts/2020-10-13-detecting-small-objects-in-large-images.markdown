@@ -4,6 +4,8 @@ date: 2020-10-13 15:18:00 +02:00
 image: "/uploads/little-dog-and-big-dog.jpg"
 ---
 
+![little-dog-and-big-dog.jpg](/uploads/little-dog-and-big-dog.jpg)
+
 In this post I write about a use case where we wanted to detect small objects in very large images. I discuss the various abstraction layers in the AI-stack and when each is appropriate to use. For each AI-layer I also list some of the available options and commercial offerings, all from the perspective of the selected use case.
 
 # Background
@@ -40,7 +42,7 @@ Although this is called AutoML there is a lot of data pre-processing required to
 **The simple frameworks**
 But wait, didn’t I just say this is a known and well researched problem? Well, yes… So we should be able to find some simple framework to try it out in “5 lines of code” ? We should. But in reality there exists only a few **that** simple-to-use frameworks. One of them is Detecto.
 
-<IMAGE>
+![detecto.gif](/uploads/detecto.gif)
 
 https://medium.com/pytorch/detecto-build-and-train-object-detection-models-with-pytorch-5f31b68a8109
 
@@ -75,7 +77,7 @@ So we have a PDF. Only a few tools above work with PDFs so we need to convert it
 
 Let us consider what the input to a CNN (Convolutional Neural Network) is. It takes the pixel values of an image that is normally resized to 200-300 pixels depending on the exact model. Now if we should resize our 4000x4000 pixel image to 200x200 this is what we get.
 
-<IMAGE>
+![blur.png](/uploads/blur.png)
 
 It is not a big mystery that our framework has trouble training from images looking like this! It is always a good idea to look at the same data thas the neural network sees and think:
 
