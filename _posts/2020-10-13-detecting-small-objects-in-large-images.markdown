@@ -133,6 +133,6 @@ These could all be topics for future posts.
 We discussed the specific use case of small objects in large images, how to approach it and how to consider the various options in all the layers of the AI-stack. We also learned that as we learn more around a problem domain during a project we can move up or down the AI-stack to find the simplest possible solution in the shortest amount of time. Now get out there and find those small objects!
 
 
-
+Torbjörn Stavenek
 
 
