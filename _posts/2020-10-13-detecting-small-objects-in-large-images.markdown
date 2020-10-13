@@ -80,14 +80,14 @@ It is not a big mystery that our framework has trouble training from images look
 
 Ok so we cannot resize the images to the size the neural network wants, but if we split the big image into smaller parts then it should work. But doing a split implies a lot more work surrounding the inference step (when we ask the model to locate objects for us):
 
-* We must find coordinates of good splitting points, considering:
-** Objects may be located exactly on the lines of the split so we need overlap of the suggested image parts
-** All parts we create must be the same size 
-* We must decide how big our parts should be
-**Smaller parts (closer to the 200-300 pixels of the neural network) means better accuracy but also more image parts to process for a single source PDF
-**Bigger parts means less inference work, but also less accuracy
-*After we run all the image parts through the detection model we get a set of detected object for each part and we must process them to get rid of duplicates from the overlapping parts of the original image.
-*We must also translate all detected objects’ coordinates to the coordinates of the original image
+1. We must find coordinates of good splitting points, considering:
+* Objects may be located exactly on the lines of the split so we need overlap of the suggested image parts
+* All parts we create must be the same size 
+2. We must decide how big our parts should be
+* Smaller parts (closer to the 200-300 pixels of the neural network) means better accuracy but also more image parts to process for a single source PDF
+* Bigger parts means less inference work, but also less accuracy
+3. After we run all the image parts through the detection model we get a set of detected object for each part and we must process them to get rid of duplicates from the overlapping parts of the original image.
+4. We must also translate all detected objects’ coordinates to the coordinates of the original image
 
 So if we can avoid this image splitting it would be good. For this use case inference time has no hard real-time requirements and there is no other obvious workaround so we are fine. I did the split and trained a new model until I found a good size for the image parts, and now it worked much better. In this case “much better” means that the CNN says: 
 
