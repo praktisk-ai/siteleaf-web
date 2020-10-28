@@ -67,10 +67,10 @@ Sales data is normally available in the business system used by a company. Or pe
 
 For the prediction case “sales for the whole company next month”, you should find this data to train your AI model. Here is a short example time series:
 
-`January 12
-February 15
-March 8
-April 9`
+* January 12
+* February 15
+* March 8
+* April 9
 
 During training the AI would look at this data and try to create a model to predict the next value in this series of numbers. Maybe it would predict 10 for May. Good! You now probably know more than before. Maybe it was exactly what you yourself predicted? Also good! The AI agrees with you. 
 
@@ -92,7 +92,7 @@ How many customers will churn next month?
 
 ### Why do this
 
-How does your company handle customer churn after the fact? The customer has already changed his mind, taken action to leave and moved on. Getting this customer back is really hard. Now, if a customer is about to leave but has not taken any actions yet, ie he is still a customer, that is a much more preferable situation. The customer is not lost and so much easier to “win” back! Would you not be interested in knowing this about your customers before the leave?
+How does your company handle customer churn after the fact? The customer has already changed his mind, taken action to leave and moved on. Getting this customer back is really hard. Now, if a customer is about to leave but has not taken any actions yet, ie he is still a customer, that is a much more preferable situation. The customer is not lost and so much easier to “win” back! Would you not be interested in knowing this about your customers before they leave?
 
 Doing this would make you money because an existing customer will continue to buy from you. It will also save you money since you will not lose that existing income, and you do not have to spend money on finding replacement business.
 
@@ -110,10 +110,10 @@ The important thing about the data is that you need examples of both types of cu
 
 All customers have opinions about your products or services. Some of your customers will write reviews about your products, sometimes where you can find them and sometimes in hard-to-find places. Wherever written it is always good to have a sense of how your customers feel about you and your products. If you have many products this can be a very big and tedious job, perhaps impossible. All you really want is one or a few numbers like these examples:
 
-`96% of the reviews where positive
-5%  negative, 75% neutral, 20% positive
-81% positive, previous month 90% positive
-`
+* 96% of the reviews where positive
+* 5%  negative, 75% neutral, 20% positive
+* 81% positive, previous month 90% positive
+
 
 Automation and AI is the answer! Automate searching and collecting reviews and let an AI perform sentiment analysis on them.
 
