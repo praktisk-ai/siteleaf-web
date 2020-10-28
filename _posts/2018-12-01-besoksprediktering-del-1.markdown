@@ -1,7 +1,6 @@
 ---
 title: Att gissa antal besökare del 1
 date: 2018-12-01 15:59:00 +01:00
-featured: true
 image: https://lh6.googleusercontent.com/yGWc_VRMIUudXEjlDH6Xvb8b5v76sIho_Zi2kxX274Dm_KRfk6qFFVgeRbJxOMMxVchyGD1qUVh4DU8wd79FbgX0-gNrFZqEdDAqIMzyj47kaQhG7TKKi_jX9FRZpjAMM3zYwsHu
 ---
 
