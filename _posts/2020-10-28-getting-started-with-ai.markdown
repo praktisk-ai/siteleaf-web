@@ -132,6 +132,6 @@ Your first step here is finding a location online with reviews about your produc
 In this article is discussed a few general AI use cases and the first steps to get started with them. I hope you now have some ideas about what to do next in your company and how to get started on the AI journey. I plan to write more articles about both general and industry specific AI use cases so stay tuned. 
 
 
-*Torbjörn Stavenek *
+Torbjörn Stavenek
 
 
