@@ -1,5 +1,5 @@
 # ignore generated folders for jekyll
-_*
+_site/*
 
 # ignore vscode stuff
 .vscode/*
