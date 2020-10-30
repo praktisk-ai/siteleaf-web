@@ -1,0 +1,12 @@
+# ignore generated folders for jekyll
+_*
+
+# ignore vscode stuff
+.vscode/*
+*.code-workspace
+
+# ignore idea stuff
+.idea/*
+
+# Local History for Visual Studio Code
+.history/
