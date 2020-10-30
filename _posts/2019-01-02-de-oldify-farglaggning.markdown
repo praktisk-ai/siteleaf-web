@@ -1,6 +1,6 @@
 ---
 title: De-Oldify - färgläggning
-date: 2019-01-02 20:45:00 Z
+date: 2019-01-02 21:45:00 +01:00
 image: "/uploads/Ballerinas.jpg"
 ---
 
