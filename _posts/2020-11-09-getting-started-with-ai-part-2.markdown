@@ -1,7 +1,7 @@
 ---
 title: Getting started with AI - part 2
 date: 2020-11-09 10:49:00 +01:00
-image: "/images/spiral.jpg"
+image: "/uploads/spiral.jpg"
 ---
 
 Many companies have no idea about how to get started with AI in their business. Recently I even heard about a company which despite having the AI skills in-house, still did not know how to apply AI practically. So this is a common problem. 
