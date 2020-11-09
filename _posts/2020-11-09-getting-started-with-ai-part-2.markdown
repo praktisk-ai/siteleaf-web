@@ -20,6 +20,8 @@ In this post I will discuss the following use cases:
 
 # Use case: Customer segmentation
 
+![clusters.png](/uploads/clusters.png)
+
 Often it can be advantageous to divide your customers into groups. On the scale from nothing to full-on one-to-one personalization, segmentation is somewhere in between. Even though segmentation can be a good thing for companies with only a few customers, to really benefit your company probably has a very large number of customers. In AI this is called clustering and is used to create groups of similar customers. Here are some simple example metrics you might manually group customers according to:
 
 * Most active last day/week/month
@@ -52,6 +54,7 @@ To find the most interesting segments of customers you need to collect all possi
 
 # Use case: Location optimization
 
+![location.jpeg](/uploads/location.jpeg)
 
 Does your company from time to time need to find the optimal geographical location for something? Perhaps you need to find the best spot for a new store, storage facility, windmill or food truck? To solve this we can use either of two different methods. But first we need to collect a number of location examples. The more examples we have the better the AI will be able to understand what we want it to learn. For each location we need to add as much data as we can find, like:
 
@@ -98,6 +101,7 @@ Remember that you yourself have rated the examples, so the AI will put a higher 
 
 # Use case: Product recommendations
 
+![recommendations.jpg](/uploads/recommendations.jpg)
 
 Product recommendations is something most people have seen. Some of the most known examples are Netflix movie recommendations and Amazon product recommendations. Entire companies have this as their core offering - helping other companies do it better. But with a little help from AI, doing this well has now become much easier than before. Many companies also have or are planning to incorporate this into their marketing or selling strategies. And for obvious reasons. Showing attractive additional products or packages is often a good way to increase sales. 
 
