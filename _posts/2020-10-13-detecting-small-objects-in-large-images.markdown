@@ -2,6 +2,8 @@
 title: Detecting small objects in large images
 date: 2020-10-13 15:18:00 +02:00
 image: "/uploads/little-dog-and-big-dog.jpg"
+featured: true
+hidden: true
 ---
 
 In this post I write about a use case where we wanted to detect small objects in very large images. I discuss the various abstraction layers in the AI-stack and when each is appropriate to use. For each AI-layer I also list some of the available options and commercial offerings, all from the perspective of the selected use case.

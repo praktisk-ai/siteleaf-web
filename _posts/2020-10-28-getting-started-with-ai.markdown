@@ -3,6 +3,7 @@ title: Getting started with AI
 date: 2020-10-28 14:52:00 +01:00
 image: "/uploads/female.jpg"
 featured: true
+hidden: true
 ---
 
 Many companies know about AI and also know that they should start looking into it. However, many companies do not know where to start. Many companies also doubt the value of AI and consider it to be fuzzy and unclear -  and for good reasons! There is much hype and hand-waving when it comes to the actual practical uses of AI. Many companies even claim to use AI when in fact they are not. This of course does not help.
@@ -132,6 +133,7 @@ Your first step here is finding a location online with reviews about your produc
 
 In this article is discussed a few general AI use cases and the first steps to get started with them. I hope you now have some ideas about what to do next in your company and how to get started on the AI journey. I plan to write more articles about both general and industry specific AI use cases so stay tuned. 
 
+The next part of this series can be found [here](https://praktisk.ai/posts/getting-started-with-ai-part-2/).
 
 Torbjörn Stavenek
 
