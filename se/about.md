@@ -17,6 +17,7 @@ Följande personer skriver mer eller mindre regelbundet inlägg och artiklar på
 AI-arkitekt. IT-arkitekt. Entreprenör.
 
 #### Andreas Vallberg [LinkedIn](https://www.linkedin.com/in/andreasvallberg/)
+(https://twitter.com/a_vallberg)
 AI-arkitekt. IT-arkitekt. Entreprenör.
 
 ## Kontakt
