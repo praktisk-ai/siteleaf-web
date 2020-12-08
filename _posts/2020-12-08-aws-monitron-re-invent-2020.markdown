@@ -17,8 +17,7 @@ Read more here:
 
 [https://aws.amazon.com/monitron/](https://aws.amazon.com/monitron/)
 
-[https://aws.amazon.com/blogs/aws/amazon-monitron-a-simple-cost-effective-service-enabling-predictive-maintenance/]
-(https://aws.amazon.com/blogs/aws/amazon-monitron-a-simple-cost-effective-service-enabling-predictive-maintenance/)
+[https://aws.amazon.com/blogs/aws/amazon-monitron-a-simple-cost-effective-service-enabling-predictive-maintenance/](https://aws.amazon.com/blogs/aws/amazon-monitron-a-simple-cost-effective-service-enabling-predictive-maintenance/)
 
 Torbjörn Stavenek
 
