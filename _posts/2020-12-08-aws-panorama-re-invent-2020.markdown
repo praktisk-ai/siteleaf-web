@@ -18,3 +18,4 @@ Read more here:
 
 [https://aws.amazon.com/panorama/](https://aws.amazon.com/panorama/)
 
+Torbjörn Stavenek
