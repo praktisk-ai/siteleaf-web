@@ -1,6 +1,7 @@
 ---
 title: AWS Monitron (re:Invent 2020)
 date: 2020-12-08 08:41:00 +01:00
+image: "/uploads/Ska%CC%88rmavbild%202020-12-07%20kl.%2010.27.44.png"
 ---
 
 One pretty exciting new service from AWS is something called AWS Monitron. This is an end-to-end system for industrial equipment predictive maintenance. A bit like “ML in a box”. With predictive maintenance the goal is to get alerts when your manufacturing equipment starts to behave “strange”, which is usually a sign that it is about to break down. This gives you time to prevent or replace it before it even happens.
