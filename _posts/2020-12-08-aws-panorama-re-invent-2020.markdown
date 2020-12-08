@@ -1,6 +1,7 @@
 ---
 title: AWS Panorama (re:Invent 2020)
 date: 2020-12-08 11:46:00 +01:00
+image: "/uploads/pano.jpg"
 ---
 
 This is computer vision at the edge. When you have video streams that you need to analyze with some of the following requirements: real-time responses, the geographical location has bandwidth limitations or intermittent connectivity, or regulations constrain what you may send to the cloud, then Panorama could be for you. This is basically “computer vision” in a box with a console and an SDK. 
