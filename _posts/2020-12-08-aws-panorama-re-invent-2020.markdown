@@ -1,6 +1,7 @@
 ---
 title: AWS Panorama (re:Invent 2020)
 date: 2020-12-08 11:46:00 +01:00
+published: false
 image: "/uploads/pano.jpg"
 ---
 
