@@ -34,10 +34,10 @@ This could for example be that your use case requires you to find “people with
 
 Luckily many companies also provide services to help you with the work at this level. You may have heard about the concept of AutoML, and this is exactly what that is: you provide the data and someone else handles all the rest. A bit more work for you, but still much less than in the bottom layer. Some of the available services you could use in this middle layer to help you out with the hat-people example:
 
-* Google Cloud: AutoML Vision, https://cloud.google.com/automl
-* AWS: Rekognition Custom labels, https://aws.amazon.com/rekognition/custom-labels-features/
-* Azure: Automated ML, https://azure.microsoft.com/en-us/services/machine-learning/automatedml/
-* Peltarion: AI Platform, https://peltarion.com/platform
+* [Google Cloud: AutoML Vision](https://cloud.google.com/automl)
+* [AWS: Rekognition Custom labels](https://aws.amazon.com/rekognition/custom-labels-features/)
+* [Azure: Automated ML](https://azure.microsoft.com/en-us/services/machine-learning/automatedml/)
+* [Peltarion: AI Platform](https://peltarion.com/platform)
 
 A fun way to play around with this is “Teachable machine” where you create simple data in the browser and then get a working model in seconds.
 
