@@ -1,6 +1,7 @@
 ---
 title: The AI Pyramid
 date: 2020-12-17 10:29:00 +01:00
+image: "/uploads/pyramid.jpg"
 ---
 
 In almost all my conversations around AI I try to stress the importance of starting any new project with an MVP, a Minimum Viable Product. In the AI world, just as in the “real” world, this means starting with a use case. What is the benefit of doing this project and for whom? When you know exactly the use case or process you want to support then you also know what AI capability you need. In an MVP you don’t need the best-of-the-best AI solution, you only need a good-enough solution. You only need enough to finish your MVP quickly and prove that your use case provides benefits. Then during the evaluation of your MVP you can decide if and what parts need to improve during your next project iteration. Perhaps it is even the case that your initial “temporary” AI solution actually performs good enough to keep it!
@@ -40,27 +41,30 @@ Luckily many companies also provide services to help you with the work at this l
 
 A fun way to play around with this is “Teachable machine” where you create simple data in the browser and then get a working model in seconds.
 
-https://teachablemachine.withgoogle.com/
+[https://teachablemachine.withgoogle.com/](https://teachablemachine.withgoogle.com/)
 
-IMAGE  “Teachable machine”
-
+[Teachable machine](https://teachablemachine.withgoogle.com/)
+![tm.png](/uploads/tm.png)
 
 
 # Bottom layer: Bring code and data
 
 In this layer we basically have to do everything ourselves: manage data, code, models, operations - all of it. But you can still benefit a lot from services provided by the cloud providers. 
 
-EDA
+## EDA
+
 When doing exploratory data analysis (EDA) with Jupyter notebooks you can run it all on your own laptop. But why should you when there are several free and paid services out there, most even provide GPUs so you don’t have to bother with the cumbersome GPU driver installations. Some examples:
 
 * Google: Colab, https://colab.research.google.com
 * Kaggle: Kernel notebooks, https://www.kaggle.com/notebooks
 * AWS: SageMaker notebooks, https://aws.amazon.com/sagemaker/
 
-Storage
+## Storage
+
 Then you also need to gather and manage your data and datasets. Storage solutions are easy to find so I will not list any here. Just remember that collecting data for the MVP is probably a quite easy one-off thing, compared to the continuous process of getting the new data that you need to keep your deployed AI models up to date.
 
-Labeling
+## Labeling
+
 You need labeling to actually draw the boxes around your hat-people, and perhaps do some data augmentations to get more training data, and here are some nice services:
 
 * Labelbox, https://app.labelbox.com/
@@ -68,18 +72,21 @@ You need labeling to actually draw the boxes around your hat-people, and perhaps
 * AWS: SageMaker Ground truth, https://aws.amazon.com/sagemaker/groundtruth/
 * Hasty, https://hasty.ai/
 
-Training
+## Training
+
 With your labeled data and your code ready it is time to do the training. For an MVP you would probably just run the training in your Jupyter notebook, but later on you will need to set up continuous training. Training could be something small and quick that fits within a serverless function (nice!), something huge requiring several days of GPU computations distributed over many machines, or something in the middle that you can execute as a Docker container on a cluster somewhere. The major cloud providers have you covered! Your options:
 
-Serverless functions
-Containers
-Virtual machines
-Cluster management services
+* Serverless functions
+* Containers
+* Virtual machines
+* Cluster management services
 
-And more...
+## And more...
+
 You need to deploy your new fancy model somewhere. You need to monitor it so the service is available. You need to look out for model drift so the model delivers correct predictions over time. And you will eventually need a data and training pipeline to do all the data collection and data management and model retraining on a regular basis.
 
-Platforms
+## Platforms
+
 As you can see, down here in the bottom layer you have to do an awful lot of stuff yourself. If you find yourself down here, have a look around at some of the all-in-one offerings out there before rolling your own. They do much for you out of the box, although it can be a bit non-flexible. Also these platforms can get quite expensive for small startups. Here are some AI platforms to consider:
 
 * AWS: Sagemaker, https://aws.amazon.com/sagemaker/
