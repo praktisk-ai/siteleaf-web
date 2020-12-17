@@ -89,9 +89,9 @@ You need to deploy your new fancy model somewhere. You need to monitor it so the
 
 As you can see, down here in the bottom layer you have to do an awful lot of stuff yourself. If you find yourself down here, have a look around at some of the all-in-one offerings out there before rolling your own. They do much for you out of the box, although it can be a bit non-flexible. Also these platforms can get quite expensive for small startups. Here are some AI platforms to consider:
 
-* AWS: Sagemaker, https://aws.amazon.com/sagemaker/
-* Google: AI Platform, https://cloud.google.com/ai-platform
-* Peltarion: AI Platform, https://peltarion.com/platform
+* [AWS: Sagemaker](https://aws.amazon.com/sagemaker/)
+* [Google: AI Platform](https://cloud.google.com/ai-platform)
+* [Peltarion: AI Platform](https://peltarion.com/platform)
 
 
 
