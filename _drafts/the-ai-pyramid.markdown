@@ -50,7 +50,7 @@ A fun way to play around with this is “Teachable machine” where you create s
 
 In this layer we basically have to do everything ourselves: manage data, code, models, operations - all of it. But you can still benefit a lot from services provided by the cloud providers. 
 
-** EDA **
+**EDA**
 
 When doing exploratory data analysis (EDA) with Jupyter notebooks you can run it all on your own laptop. But why should you when there are several free and paid services out there, most even provide GPUs so you don’t have to bother with the cumbersome GPU driver installations. Some examples:
 
@@ -62,7 +62,7 @@ When doing exploratory data analysis (EDA) with Jupyter notebooks you can run it
 
 Then you also need to gather and manage your data and datasets. Storage solutions are easy to find so I will not list any here. Just remember that collecting data for the MVP is probably a quite easy one-off thing, compared to the continuous process of getting the new data that you need to keep your deployed AI models up to date.
 
-## Labeling
+**Labeling**
 
 You need labeling to actually draw the boxes around your hat-people, and perhaps do some data augmentations to get more training data, and here are some nice services:
 
@@ -71,7 +71,7 @@ You need labeling to actually draw the boxes around your hat-people, and perhaps
 * AWS: SageMaker Ground truth, https://aws.amazon.com/sagemaker/groundtruth/
 * Hasty, https://hasty.ai/
 
-## Training
+**Training**
 
 With your labeled data and your code ready it is time to do the training. For an MVP you would probably just run the training in your Jupyter notebook, but later on you will need to set up continuous training. Training could be something small and quick that fits within a serverless function (nice!), something huge requiring several days of GPU computations distributed over many machines, or something in the middle that you can execute as a Docker container on a cluster somewhere. The major cloud providers have you covered! Your options:
 
@@ -80,11 +80,11 @@ With your labeled data and your code ready it is time to do the training. For an
 * Virtual machines
 * Cluster management services
 
-## And more...
+**And more...**
 
 You need to deploy your new fancy model somewhere. You need to monitor it so the service is available. You need to look out for model drift so the model delivers correct predictions over time. And you will eventually need a data and training pipeline to do all the data collection and data management and model retraining on a regular basis.
 
-## Platforms
+**Platforms**
 
 As you can see, down here in the bottom layer you have to do an awful lot of stuff yourself. If you find yourself down here, have a look around at some of the all-in-one offerings out there before rolling your own. They do much for you out of the box, although it can be a bit non-flexible. Also these platforms can get quite expensive for small startups. Here are some AI platforms to consider:
 
@@ -97,6 +97,7 @@ As you can see, down here in the bottom layer you have to do an awful lot of stu
 # Summary
 
 In this article I presented a generalized AI layering model, the AI pyramid, based on what you yourself need to do in each layer. For illustration purposes I used a random use case of finding people with funny hats in pictures. For other use cases there are of course many other ready-made AI services you could use. As you can see we have to do more and more work the further we get from the top of the pyramid. So obviously when we need AI, we should always start at the top. For each layer of the pyramid we should carefully consider if we can use what is available before moving down to the next layer. So good luck with your next project and hopefully you can stay at the top!
+
 
 Torbjörn Stavenek
 
