@@ -16,9 +16,9 @@ This is the easiest and fastest way to get started with AI. You bring nothing be
 
 If for example your MVP needs to count people in a picture then this is not a very unique requirement. To build it yourself you would have to collect tons of pictures with people in them, train an AI to find those people and deploy the model. But this is your lucky day! Because this is such a generic use case, a service to find people in a picture is just an API call away, like these:
 
-* Azure: Cognitive Services - Computer vision, https://azure.microsoft.com/sv-se/services/cognitive-services/computer-vision/
-* Google Cloud: Cloud Vision API, https://cloud.google.com/vision
-* AWS: Rekognition, https://aws.amazon.com/rekognition
+* [Azure: Cognitive Services - Computer vision ](https://azure.microsoft.com/sv-se/services/cognitive-services/computer-vision/)
+* [Google Cloud: Cloud Vision API](https://cloud.google.com/vision) 
+* [AWS: Rekognition](https://aws.amazon.com/rekognition)
 
 
 In all of these services someone else has already done the job for you. Those big companies have the resources to create really good generic services and you should leverage that if you can. Perhaps they are not exactly what you need or they are not as accurate as you had hoped for. But as I stated before: those services are just an API call away, so if you can - start with here, and especially now that we are talking about an MVP.
