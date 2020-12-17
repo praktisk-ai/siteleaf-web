@@ -54,9 +54,9 @@ In this layer we basically have to do everything ourselves: manage data, code, m
 
 When doing exploratory data analysis (EDA) with Jupyter notebooks you can run it all on your own laptop. But why should you when there are several free and paid services out there, most even provide GPUs so you don’t have to bother with the cumbersome GPU driver installations. Some examples:
 
-* Google: Colab, https://colab.research.google.com
-* Kaggle: Kernel notebooks, https://www.kaggle.com/notebooks
-* AWS: SageMaker notebooks, https://aws.amazon.com/sagemaker/
+* [Google: Colab](https://colab.research.google.com)
+* [Kaggle: Kernel notebooks](https://www.kaggle.com/notebooks)
+* [AWS: SageMaker notebooks](https://aws.amazon.com/sagemaker/)
 
 **Storage**
 
@@ -66,10 +66,11 @@ Then you also need to gather and manage your data and datasets. Storage solution
 
 You need labeling to actually draw the boxes around your hat-people, and perhaps do some data augmentations to get more training data, and here are some nice services:
 
-* Labelbox, https://app.labelbox.com/
-* RoboFlow: https://roboflow.com/features
-* AWS: SageMaker Ground truth, https://aws.amazon.com/sagemaker/groundtruth/
-* Hasty, https://hasty.ai/
+* [Labelbox](https://app.labelbox.com/)
+* [RoboFlow](https://roboflow.com/)
+* [AWS: SageMaker Ground truth](https://aws.amazon.com/sagemaker/groundtruth/)
+* [Hasty](https://hasty.ai/)
+
 
 **Training**
 
