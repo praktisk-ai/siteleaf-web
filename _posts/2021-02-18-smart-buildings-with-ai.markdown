@@ -33,6 +33,8 @@ There are also other air quality sensors that can be monitored for anomalies lik
 
 **Visitor forecasting**
 
+![crowd.png](/uploads/crowd.png)
+
 If you could have an AI learn and forecast the number of visitors to your building, what would you change? This can impact many things when it comes to facility management: staffing, purchasing, energy consumption, etc. Or if you run a commercial building, forwarding this information to your tenants provides added value, makes them happier and allows them to optimize their business. Depending on how fine-grained sensor data you have available, you as a landlord may even be able to foresee tenants with problems ahead whose foot traffic is declining, and take actions to help them. 
 
 So if you expect a lot of visitors you can make sure to staff up properly, and vice versa. A restaurant expecting fewer customers might consider buying less of the expensive perishable stuff they have on the menu. And an office may decide to close down some parts to save energy when it seems very few employees will be there.
