@@ -66,10 +66,14 @@ Another interesting case is when you have sensor data and for some reason you ge
 
 **Elevator usage**
 
+![elevator.png](/uploads/elevator.png)
+
 Some buildings have a lot of people coming or going during a few hours every day. When they all depend on elevators there is bound to be waiting involved, and no one likes to wait. What if the elevators could anticipate the floor where people would next want to “come aboard” from? Well, this has been tried with positive results. The AI monitors and learns the traffic patterns and then moves around autonomously when not in use trying to anticipate where the next person will come from. For large elevator systems this could also include elevators communicating between themselves to optimize the traffic flow even further.
 
 
 **Chatbot**
+
+![chatbot.png](/uploads/chatbot.png)
 
 Chatbots can be a useful tool for many things in the areas of providing information and collecting information.
 
