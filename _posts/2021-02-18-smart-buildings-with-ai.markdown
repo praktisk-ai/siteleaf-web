@@ -1,6 +1,7 @@
 ---
 title: Smart buildings with AI
 date: 2021-02-18 09:49:00 +01:00
+image: "/uploads/city.png"
 ---
 
 Buildings and facility management have a large number of AI use cases. Most of them are about minimizing cost and waste, some are about optimizing energy and usage efficiency, and a few are about improving the lives of the visitors or inhabitants. Using sensors of some kind is often a prerequisite to be able to gather the data used by the AI. In this article I will discuss 7 valuable AI use cases you can apply in your facility management business.
