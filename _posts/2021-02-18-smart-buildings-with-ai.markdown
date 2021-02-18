@@ -60,6 +60,7 @@ This is useful for doors of all kinds, especially automated ones, elevators, esc
 Moving things tend to wear down over time and eventually break. Collecting sensor data helps to identify problems early on and can also be used to calculate something called “Remaining Useful Life” (RUL), remaining time before failure. Imagine getting a list of building inventory ordered by RUL? Basically an itinerary for your staffs’ manual inspections!
 
 **Gap filling**
+![gap.png](/uploads/gap.png)
 
 Another interesting case is when you have sensor data and for some reason you get a gap in the data. This could be due to sensor failure, power outage, communication failure, etc. Anyway you have a gap in your data. Is this a problem? If this data is the basis for invoicing your tenants, then yes. In this case the AI could learn the normal patterns of the sensor data and do normal forecasting based on historical values. But since it is a gap we also know about the data coming after the gap so we can apply backward forecasting based on that “future” data and so we get twice the confidence in the forecasted gap. Now we can invoice with confidence!
 
