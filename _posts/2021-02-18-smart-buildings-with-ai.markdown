@@ -52,6 +52,8 @@ You would probably want to supervise the AI during the initial training...
 
 **Predictive maintenance**
 
+![cog.jpg](/uploads/cog.jpg)
+
 If you have sensors on things that can break - good for you! That means you can train an AI what constitutes normal sensor values and this means it can help you detect anomalies. Just as with the energy usage, detecting anomalous values can help us understand when something is not operating normally. Detecting problems early can trigger alerts to send human staff to investigate and fix things faster or preemptively, increasing overall quality and happiness.
 
 This is useful for doors of all kinds, especially automated ones, elevators, escalators, etc. Sensors can detect that elevators stop a few millimeters above or below the floor, or doors vibrating more than usually when opening, or escalators change speed.
