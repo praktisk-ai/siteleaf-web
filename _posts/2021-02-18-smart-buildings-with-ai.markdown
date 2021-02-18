@@ -17,7 +17,7 @@ Use cases
 
 **Anomaly detection**
 
-![leak.jpeg](/uploads/leak.jpeg)
+![leak2.png](/uploads/leak2.png)
 
 Anomaly detection is an area which has many applications and I will walk you through  a few of them below. 
 
