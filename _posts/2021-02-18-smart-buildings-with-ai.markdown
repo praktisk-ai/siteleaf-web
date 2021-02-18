@@ -17,6 +17,8 @@ Use cases
 
 **Anomaly detection**
 
+![leak.jpeg](/uploads/leak.jpeg)
+
 Anomaly detection is an area which has many applications and I will walk you through  a few of them below. 
 
 Energy consumption is often a large cost when it comes to buildings. There is a cost for both heating and cooling, and ventilation, and all combinations... This is what makes it so interesting to try and optimize - even a small improvement can translate into a lot of money. So if you have a single graph of energy usage for a specific room or building, it is pretty easy for a trained eye to spot any irregularities. You immediately see when things started to deviate from the expected. You have found an anomaly. Then of course there may be other factors to consider like outdoor temperature or huge number of people, etc. But apart from this, it is pretty straight forward. This is not the problem. 
