@@ -42,6 +42,8 @@ So if you expect a lot of visitors you can make sure to staff up properly, and v
 
 **Active energy optimization**
 
+![diri.png](/uploads/diri.png)
+
 We come back to energy again, this time looking at it from an operational point of view, how to actively and continuously tune the energy usage. The AI can be taught what needs to be done to operate a building in a desired way. By why just have the AI tell you to “turn this knob to 5, and this one to 3” - why not let the AI do this by itself?! This has been implemented by some innovative companies like [DeepMind and Google ](https://deepmind.com/blog/article/deepmind-ai-reduces-google-data-centre-cooling-bill-40)in a few of their data centers, claiming to save up to 40% in energy cost! 
 
 In this scenario you tell the AI what you want to achieve, like the acceptable range of temperature, humidity, CO2, etc. Then you tell it what “levers” or “knobs” it can use to achieve this. You start it up, cross your fingers and you wait. This is an area within AI called reinforcement learning, where the AI observes its environment and what happens as it manipulates it by using actions. In this case the actions would be “pulling levers” and “turning knobs”. As it explores the effects of its actions it slowly learns to control its environment.  
