@@ -95,7 +95,7 @@ Oct - 3 events
 Nov - 8 events
 </pre>
 
-But since we know there is some delay between the events happening and the actual costs we need to “lag” the data. This means that for every row (with features and cost) we also include data from previous months. So the data would look like this:
+But since we know there is some delay between the events happening and the actual costs we need to “lag” the data. This means that for every row (with features and cost) we also include data from previous months. So the final training data would look like this:
 
 <pre>
 Month, Actual cost, Count of events previous month, Count of events 2 months back
