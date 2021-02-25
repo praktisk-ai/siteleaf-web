@@ -38,6 +38,8 @@ Here is a data extract.
 SELECT monthDate, totalAmount FROM cost
 </pre>
 
+![rows.png](/uploads/rows.png)
+
 
 **Training the model**
 
