@@ -8,7 +8,7 @@ In this post I will discuss two different AI use cases built around the AI capab
 
 # What is BigQuery?
 
-BigQuery is an enterprise-scale data warehouse database-as-a-service offering. It is supposedly serverless but as we use it as a service we don’t really care. BigQuery allocates storage and query resources dynamically based on your usage patterns. It is also a type of columnar database so we do not need to explicitly specify indexes to perform searches effectively. This is done for you.  You can access it using ANSI SQL, or libraries for multiple languages. One nice feature is simple access from Google Colab, Google’s free Jupyter notebooks offering.
+BigQuery is an enterprise-scale data warehouse database-as-a-service offering. It is supposedly serverless but as we use it as a service we don’t really care. BigQuery allocates storage and query resources dynamically based on your usage patterns. It is also a type of columnar database so we do not need to explicitly specify indexes to perform searches effectively. This is done automatically for you.  You can access it using ANSI SQL, or libraries for multiple languages. One nice feature is simple access from Google Colab, Google’s free Jupyter notebooks offering.
 
 # What is BigQuery ML?
 BigQuery ML lets you train and run machine learning models inside BigQuery. You can choose among a number of provided ML-models and you configure both training and inference using an extended version of SQL queries. 
