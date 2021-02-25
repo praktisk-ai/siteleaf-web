@@ -116,14 +116,14 @@ The "blob-image" above illustrates how we could visualize this with all our trai
 We now have a dataset that we can use to train a model. A suitable first model for this problem is linear regression which as we saw earlier is one of the models BigQuery ML supports and here is basically how you would do that.
 
 <pre>
-CREATE my_lr_model
-   OPTIONS (model_type = 'LINEAR_REG' ) AS
-   SELECT * FROM (
-      SELECT totalAmount as label FROM (
-           LAG(event_count, 1) ... as count_lag_one,
-           LAG(event_count, 2) ... as count_lag_two,
-		...
-	)
+CREATE MODEL my_lr_model
+OPTIONS (model_type = 'LINEAR_REG' ) AS
+SELECT 
+    totalAmount as label,
+    LAG(event_count, 1) ... as count_lag_one,
+    LAG(event_count, 2) ... as count_lag_two,
+    ...
+)
 </pre>
 
 Relying on the default settings for the linear regression model the configuration for this is ridiculously easy. But you may need to tweak it and there are quite a few knobs to turn. Also note the handy LAG operator in the SQL which works just like “shift” in the Python Pandas’ world.
