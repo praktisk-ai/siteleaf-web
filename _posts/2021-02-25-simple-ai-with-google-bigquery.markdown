@@ -45,7 +45,9 @@ As I mentioned before there are a number of models available in BigQuery and one
 
 
 `CREATE MODEL my_arima_model
+
  OPTIONS (
+
    model_type = 'ARIMA',
    time_series_timestamp_col = 'monthDate',
    time_series_data_col = 'totalAmount',
