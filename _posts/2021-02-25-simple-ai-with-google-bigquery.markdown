@@ -108,7 +108,7 @@ When we use this data to train a model we basically say:
 
 *“I have these two values, 3 and 5, if you see them you should output 288615”*
 
-The "blob-image" above illustrates how we could visualize this with all out training data. We use the one-month-lag on the x-axis and and two-month-lag on the y-axis, and set a darker colour for higher numbers. 
+The "blob-image" above illustrates how we could visualize this with all our training data. We use the one-month-lag on the x-axis and and two-month-lag on the y-axis, and set a darker colour for higher numbers. 
 
 **Training the model**
 
