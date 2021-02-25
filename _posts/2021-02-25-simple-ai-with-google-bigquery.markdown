@@ -1,6 +1,7 @@
 ---
 title: Simple AI with Google BigQuery
 date: 2021-02-25 14:14:00 +01:00
+image: "/uploads/bq4.png"
 ---
 
 In this post I will discuss two different AI use cases built around the AI capabilities provided by Google BigQuery ML. This is a quick and easy way to get started with your AI projects, especially if you are already using Google Cloud. The first use case is a time series forecasting problem where we want to predict some monthly tracked cost 12 months ahead. The second use case is a variation of the first one where we basically want to predict the same cost for just the next month but based on a count of events that has occurred one or two months before today. This post will be a bit more technical than usual including some SQL, but still simple enough that I think everyone will be able to follow along. 
@@ -23,6 +24,9 @@ Some of the models available are:
 * ARIMA
 
 # Use case 1: One year horizon cost forecasting
+
+![arima.png](/uploads/arima.png)
+
 In this use case we have stored a monetary cost every month so now we have a monthly time series of costs. Using this time series we want to forecast the cost every month with a one year horizon, meaning we want to forecast 12 numbers. We assume the required data is already available in BigQuery.
 
 **Data**
@@ -33,7 +37,6 @@ Here is a data extract.
 SELECT monthDate, totalAmount FROM cost
 `
 
-IMAGE
 
 
 **Training the model**
@@ -72,6 +75,9 @@ It is as simple as that.
 
 
 # Use case 2: Next month cost forecasting
+
+![jp.png](/uploads/jp.png)
+
 
 In this use case we want to estimate the cost for the next month. We continuously track and save events that we know will affect our costs, but we do not know exactly how or when. 
 
