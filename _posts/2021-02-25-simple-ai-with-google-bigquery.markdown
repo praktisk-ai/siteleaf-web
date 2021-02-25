@@ -53,8 +53,7 @@ As I mentioned before there are a number of models available in BigQuery and one
    time_series_data_col = 'totalAmount',
    DATA_FREQUENCY = 'MONTHLY',
    ) AS
-SELECT monthDate, totalAmount
-FROM ( SELECT monthDate, totalAmount FROM cost )
+  SELECT monthDate, totalAmount FROM cost 
 </pre>
 
 When we have created this model we can also look at various parameters and metrics of the model.
