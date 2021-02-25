@@ -63,7 +63,7 @@ So when we have specified and scheduled this query, the work required to host an
 
 **Querying the model**
 
-Now we also want to query this model. I stated earlier that we wanted we see 12 months of forecasted cost numbers and this is how we do that.
+Now we also want to query this model. I stated earlier that we wanted to see 12 months of forecasted cost numbers and this is how we do that.
 
 <pre>
 SELECT forecast_value 
