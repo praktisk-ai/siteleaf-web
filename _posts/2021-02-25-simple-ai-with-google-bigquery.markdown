@@ -137,7 +137,7 @@ I provide the incoming data in the WITH statement and then ask the model to do a
 
 # Summary
 
-BigQuery ML has certainly made working with AI and large datasets seductively easy. It is a natural first stop on your AI journey to quickly get one of the supported models up and running. Eventually it does however require a little planning of how you structure the data, so you can feed it into the models in a simple way. The next step in your project will probably also require you to take a step back and do a little EDA (Exploratory Data Analysis) outside of BigQuery to better understand your data. After that, there is a big chance you will just go back to BigQuery ML but with your increased data knowledge perhaps tweak the models a bit. And if you feel you have outgrown the supported models Google also provides many other ways you can run AI solutions. Happy BigQuery coding!
+BigQuery ML has certainly made working with AI and large datasets seductively easy. It is a natural first stop on your AI journey to quickly get one of the supported models up and running. Eventually it does however require a little planning of how you structure the data, so you can feed it into the models in a simple way. The next step in your project will probably also require you to take a step back and do a little EDA (Exploratory Data Analysis) outside of BigQuery to better understand your data. I recommend Google Colab. After that, there is a big chance you will just go back to BigQuery ML, but now armed with your increased data knowledge you will probably tweak the models a bit. And if you feel you have outgrown the supported models Google also provides many other ways you can run AI models. Happy BigQuery coding!
 
 
 Torbjörn Stavenek
