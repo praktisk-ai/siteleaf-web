@@ -11,17 +11,18 @@ In this post I will discuss two different AI use cases built around the AI capab
 BigQuery is an enterprise-scale data warehouse database-as-a-service offering. It is supposedly serverless but as we use it as a service we don’t really care. BigQuery allocates storage and query resources dynamically based on your usage patterns. It is also a type of columnar database so we do not need to explicitly specify indexes to perform searches effectively. This is done automatically for you.  You can access it using ANSI SQL, or libraries for multiple languages. One nice feature is simple access from Google Colab, Google’s free Jupyter notebooks offering.
 
 # What is BigQuery ML?
+
 BigQuery ML lets you train and run machine learning models inside BigQuery. You can choose among a number of provided ML-models and you configure both training and inference using an extended version of SQL queries. 
 
 The first big advantage of this is how simple it is to create and host a model as I will discuss in the use cases below. The second advantage is that you don’t need to extract out of BigQuery all the data required for training - instead you move the training code to the data. These features increase development speed and lessen the operational burden.
 
 Some of the models available are:
-
 * Linear/Logistic regression
 * Boosted trees classifier/regressor
 * Deep neural networks classifier/regressor
 * K-means
 * ARIMA
+
 
 # Use case 1: One year horizon cost forecasting
 
@@ -97,6 +98,7 @@ But since we know there is some delay between the events happening and the actua
 
 <pre>
 Month, Actual cost, Count of events previous month, Count of events 2 months back
+...
 Oct, 265806, 5, 12
 Nov, 288615, 3, 5
 </pre>
@@ -106,6 +108,7 @@ When we use this data to train a model we basically say:
 
 *“I have these two values, 3 and 5, if you see them you should output 288615”*
 
+The "blob-image" above illustrates how we could visualize this with all out training data. We use the one-month-lag on the x-axis and and two-month-lag on the y-axis, and set a darker colour for higher numbers. 
 
 **Training the model**
 
