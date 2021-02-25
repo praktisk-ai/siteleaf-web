@@ -43,8 +43,8 @@ SELECT monthDate, totalAmount FROM cost
 
 As I mentioned before there are a number of models available in BigQuery and one of them is ARIMA which is a time series forecasting model. Now we want to create an ARIMA-model based on the data in our table, and here is the code to do that.
 
-
-> CREATE MODEL my_arima_model
+<pre>
+ CREATE MODEL my_arima_model
  OPTIONS (
    model_type = 'ARIMA',
    time_series_timestamp_col = 'monthDate',
@@ -53,7 +53,7 @@ As I mentioned before there are a number of models available in BigQuery and one
    ) AS
 SELECT monthDate, totalAmount
 FROM ( SELECT monthDate, totalAmount FROM cost )
-
+</pre>
 
 When we have created this model we can also look at various parameters and metrics of the model.
 
