@@ -24,7 +24,7 @@ After you have done the basic verification of your use case the next step is pro
 
 ![pizza2_box.jpg](/uploads/pizza2_box.jpg)
 
-One Swedish company that produces different kinds of ready-made foods, like pizzas, are using LFV. They use it on their production line for frozen pizzas to make sure the quality standards are met. This solution can detect for instance if the cheese coverage is insufficient or if any large component, like a pepperoni, is missing. I think this is my favourite AI use case so far! 
+One Swedish company that produces different kinds of ready-made foods, like pizzas, are using LFV. They use it on their production line for frozen pizzas to make sure the quality standards are met. This solution can detect for instance if the cheese coverage is insufficient or if any large component, like a pepperoni, is missing. I think this is my favorite AI use case so far! 
 
 Torbjörn Stavenek
 
