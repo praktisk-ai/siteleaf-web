@@ -1,6 +1,7 @@
 ---
 title: AWS Lookout for Vision goes GA
 date: 2021-03-04 15:04:00 +01:00
+image: "/uploads/pcb.jpg"
 ---
 
 A few days ago AWS announced General Availability for their service Lookout for Vision. This is an AI service that provides image based anomaly detection in manufacturing using computer vision. With basically no need for AI knowledge this service can be quickly implemented in your manufacturing process to detect product anomalies and defects at a low cost. Using this service would increase product quality as well as reduce operational costs. The service was released in beta during AWS re:invent 2020 in the beginning of December.
@@ -20,6 +21,8 @@ After you have done the basic verification of your use case the next step is pro
 
 
 # Cool use case: Pizza
+
+![pizza2_box.jpg](/uploads/pizza2_box.jpg)
 
 One Swedish company that produces different kinds of ready-made foods, like pizzas, are using LFV. They use it on their production line for frozen pizzas to make sure the quality standards are met. This solution can detect for instance if the cheese coverage is insufficient or if any large component, like a pepperoni, is missing. I think this is my favourite AI use case so far! 
 
