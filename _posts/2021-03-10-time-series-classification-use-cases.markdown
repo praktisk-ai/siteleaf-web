@@ -13,7 +13,7 @@ Now you have a time series in front of you. You look at it and think:
 
 > “Hmm, that looks very much like the vibration time series of a cog that is not working!”
 
-This of course happens to all of us all the time… Not many of us could say something like this or would even ever be exposed to a time series like that. But in case it would happen here is what we should be saying:
+This of course happens to all of us all the time… Nah, not many of us could say something like this or would even ever be exposed to this situation. But in case it would happen here is what we should be saying:
 
 > “Hmm, if only I had some time series examples of normal and malfunctioning cog vibrations!” 
 
