@@ -1,6 +1,7 @@
 ---
 title: Time series classification use cases
 date: 2021-03-10 13:48:00 +01:00
+image: "/uploads/crops2.png"
 ---
 
 A time series is an ordered sequence of numbers over time. For certain problems you want to  look at a specific time series and from its characteristics be able to say something clever about it. Perhaps its origin or about some feature of the source. This is a class of problems called time series classification that I will discuss in this article, and when you start looking for them they pop up absolutely everywhere! 
