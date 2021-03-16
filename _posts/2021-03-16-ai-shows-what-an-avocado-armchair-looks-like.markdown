@@ -18,7 +18,8 @@ Here are a few example images.
 ![avocados.png](/uploads/avocados.png)
 > "an armchair in the shape of an avocado"
 
-
+![strawberries.png](/uploads/strawberries.png)
+> "a clock in the style of a strawberry"
 
 **Outro**
 
