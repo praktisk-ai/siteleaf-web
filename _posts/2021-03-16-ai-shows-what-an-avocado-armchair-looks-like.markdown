@@ -1,7 +1,7 @@
 ---
 title: AI shows what an avocado armchair looks like
 date: 2021-03-16 15:04:00 +01:00
-image: "/uploads/avo-chair.png"
+image: "/uploads/avos.png"
 ---
 
 OpenAI is an AI research company. They are probably most famous for their language model GPT-2 that allegedly was “too dangerous to be shared”. They soon released an even better model, GPT-3. This latest model was then used as the basis for training an AI called DALL-E to generate images from textual descriptions. Using text-image pairs as a training dataset this model is able to combine unrelated concepts into plausible images of things that never actually existed.
