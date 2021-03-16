@@ -23,6 +23,12 @@ So the researchers turned to images instead. Using the knowledge encoded in GPT 
 ![strawberries.png](/uploads/strawberries.png)
 > "a clock in the style of a strawberry"
 
+
+![porcubox.png](/uploads/porcubox.png)
+> "a cube made of porcupine"
+
+
+
 **Outro**
 
 It is not all rainbows and unicorns though - even DALL-E has its limits. Including too many objects in a description stretches its ability to keep track of what to draw. Sometimes a different wording will get you what you want and sometimes something completely different. There are also signs that DALL-E is just showing images it has seen previously rather than generating new ones. This memorization ability is something that GPT is “famous” for so this feature is not very surprising. Another problem with DALL-E is that you have to generate a lot of images, in the range of hundreds or thousands, to find one you are satisfied with. 
