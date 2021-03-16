@@ -6,7 +6,7 @@ image: "/uploads/avo-chair.png"
 
 OpenAI is an AI research company. They are probably most famous for their language model GPT-2 that allegedly was “too dangerous to be shared”. They soon released an even better model, GPT-3. This latest model was then used as the basis for training an AI called DALL-E to generate images from textual descriptions. Using text-image pairs as a training dataset this model is able to combine unrelated concepts into plausible images of things that never actually existed.
 
-**Intro**
+# Intro
 
 The GPT language models have always been impressive in both their results and their sheer size, consisting of billions of parameters. Given just a starting sentence the GPT models have been able to generate large paragraphs of text fooling text-mining systems and humans alike. However, studying the generated texts a little closer quickly reveals their incoherence across sentences. 
 
@@ -14,7 +14,7 @@ The GPT language models have always been impressive in both their results and th
 So the researchers turned to images instead. Using the knowledge encoded in GPT and combining it with pixels turned out to be a fruitful combination. By basing a new AI model on GPT-3 and training it on a tailor made dataset with text-image pairs a new interesting result was achieved: an AI reading a textual description of a scene and generating the corresponding image. 
 
 
-#Some example images
+# Some example images
 
 ![avocados.png](/uploads/avocados.png)
 > "an armchair in the shape of an avocado"
@@ -30,7 +30,7 @@ So the researchers turned to images instead. Using the knowledge encoded in GPT 
 
 
 
-**Outro**
+# Outro
 
 It is not all rainbows and unicorns though - even DALL-E has its limits. Including too many objects in a description stretches its ability to keep track of what to draw. Sometimes a different wording will get you what you want and sometimes something completely different. There are also signs that DALL-E is just showing images it has seen previously rather than generating new ones. This memorization ability is something that GPT is “famous” for so this feature is not very surprising. Another problem with DALL-E is that you have to generate a lot of images, in the range of hundreds or thousands, to find one you are satisfied with. 
 
