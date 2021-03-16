@@ -13,10 +13,12 @@ The GPT language models have always been impressive in both their results and th
 So the researchers turned to images instead. Using the knowledge encoded in GPT and combining it with pixels turned out to be a fruitful combination. By basing a new AI model on GPT-3 and training it on a tailor made dataset with text-image pairs a new interesting result was achieved: an AI reading a textual description of a scene and generating the corresponding image. 
 
 
-Here are a few example images.
+#Some example images
 
 ![avocados.png](/uploads/avocados.png)
 > "an armchair in the shape of an avocado"
+
+
 
 ![strawberries.png](/uploads/strawberries.png)
 > "a clock in the style of a strawberry"
