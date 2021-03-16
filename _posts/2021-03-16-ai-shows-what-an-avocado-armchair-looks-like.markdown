@@ -16,13 +16,13 @@ So the researchers turned to images instead. Using the knowledge encoded in GPT 
 
 # Some example images
 
-![avocados.png](/uploads/avocados.png)
-> "an armchair in the shape of an avocado"
+![white-strw.png](/uploads/white-strw.png)
+> "a stained glass window with an image of a white strawberry"
 
 
 
-![strawberries.png](/uploads/strawberries.png)
-> "a clock in the style of a strawberry"
+![store-py.png](/uploads/store-py.png)
+> "a store front with the text pytorch"
 
 
 ![porcubox.png](/uploads/porcubox.png)
