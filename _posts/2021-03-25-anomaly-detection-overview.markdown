@@ -1,6 +1,7 @@
 ---
 title: Anomaly detection overview
 date: 2021-03-25 10:29:00 +01:00
+image: "/uploads/bulbs.png"
 ---
 
 Anomaly detection is the notion of automatically looking at data and finding outliers, i.e. data points that do not fit in well with the rest of the dataset. Finding an outlier is usually a sign that something exceptional has happened that should trigger further investigations or actions. Anomaly detection can be performed on existing historical datasets e.g. when you are pre-processing your AI training data. It can also be used on a real time data stream from your business transactions or sensor readings to almost instantly flag a data point as anomalous. This is a great example of AI automating things that a human can do and with a glance at a graph see a problem. Doing this manually for 100s or 1000s of datasets is not feasible though and this is where the relentlessly working AI can come in and do it for you. Simply looking at graphs is also something a human can do well for data in one, two or even three dimensions. With higher dimensional data things get very hard to visualize and this is also an area where an AI can shine. In this article I will discuss anomaly detection from a few different perspectives and with this new tool under your belt you will start to look at the world with different eyes!
