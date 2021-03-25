@@ -65,4 +65,5 @@ Now you know a little more about anomaly detection, use cases and some pitfalls.
 
 
 *Torbjörn Stavenek*
+
 [LinkedIn](https://www.linkedin.com/in/tstavenek/)
