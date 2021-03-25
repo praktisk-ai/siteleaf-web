@@ -64,6 +64,5 @@ There are an endless list of use cases for anomaly detection and here are some e
 Now you know a little more about anomaly detection, use cases and some pitfalls. As usual it all comes down to the use case: what are we looking for, what data can we use and who wants to know about the results. Happy anomaly hunting!
 
 
-*Torbjörn Stavenek*
-
-[LinkedIn](https://www.linkedin.com/in/tstavenek/)
+*Torbjörn Stavenek* - 
+[LinkedIn Profile](https://www.linkedin.com/in/tstavenek/)
