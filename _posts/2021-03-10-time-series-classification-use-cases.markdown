@@ -62,4 +62,6 @@ One particularly cool use case is this: a group of people wanted to be alerted w
 
 Ok, hopefully you now know a bit more about what can be done with time series classification and what to look for.  I also hope this will help you identify cases within your own organization. Happy use case hunting!
 
-Torbjörn Stavenek
+
+*Torbjörn Stavenek* - 
+[LinkedIn Profile](https://www.linkedin.com/in/tstavenek/)
