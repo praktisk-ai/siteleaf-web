@@ -9,13 +9,13 @@ Anomaly detection is the notion of automatically looking at data and finding out
 Many use cases for anomaly detection has to do with time series data. Perhaps you have sensor readings coming in every hour and you would like to know as soon as possible when readings start to deviate from the expected range. For these use cases we can use a “forecasting based” approach.
 This is an approach to anomaly detection that is very suitable for time series data since there exists a large number of tools designed for this. You basically do a normal time series forecasting of the data and measure the error compared to the actual value. You will then get a distribution of errors and the idea here is that if your specifically forecasted error exceeds some limit, say 3 standard deviations (99.7% of the errors will fall inside this range), then we will flag this data point as an anomaly. Another way could be to calculate a confidence interval based on the prediction and flag the actual data point when it falls outside of this interval. 
 
-
+![ts-std.png](/uploads/ts-std.png)
 
 In the image above the actual real data point (blue) is outside the predicted and tolerated confidence interval and thus flagged as an anomaly.
 
 AS an example of a high level anomaly detection service take a look at “AWS Cloudwatch Anomaly detection”. All you have to do is get your metric data into Cloudwatch and “tick a box” to enable the anomaly detection. You will now be able to trigger alarms on anomalies and also display the  metrics with confidence intervals in the console. Below is what it looks like.
 
-
+![aws-cw-ad.png](/uploads/aws-cw-ad.png)
 
 # Regression based
 Closely related to the forecasting based anomaly detection is the “regression based” detection that can be used more generally to look at data and predict a value. Assume you have a website where people sell stuff and they can set whatever price they want. You as the site owner could predict the price of their article and alert them to the fact that their price seems to be “too high” or “too low” based on historical sale prices for the same kind of article. 
@@ -26,10 +26,11 @@ When your data is not a time series and you have to resort to other methods, whi
 
 Look at the image below, it clearly has some outliers and a cluster where most of the data seems to be located.
 
-
+![2d-anomaly.png](/uploads/2d-anomaly.png)
 
 Applying two different outlier detection algorithms to this data gives us these two decision functions for some (not very good…) hyperparameter settings.
 
+![anomaly-analysis.png](/uploads/anomaly-analysis.png)
 
 The orange area is where the specific algorithm will classify a data point as “normal”. You can see that the learned decision functions for these two algorithms do not completely align. That is why ensembling several algorithms, i.e. combining several different types or algorithms, can sometimes be a good choice to get a better “averaged decision function”. 
 
@@ -45,4 +46,5 @@ Sometimes you are looking for anomalies in your data but it does not really fit 
 # Summary 
 Now you know a little more about anomaly detection, use cases and some pitfalls. As usual it all comes down to the use case: what are we looking for, what data can we use and who wants to know about the results. Happy anomaly hunting!
 
-Torbjörn Stavenek
+
+*Torbjörn Stavenek*
