@@ -43,6 +43,22 @@ Anomaly detection is not a magic tool. You cannot just throw a bunch of data int
 
 Sometimes you are looking for anomalies in your data but it does not really fit into the previously described approaches using the raw or unprocessed data. This could be for instance some KPI you are monitoring that is based on some perhaps complex calculation from the raw data. This is what is called “feature engineering” and is very important when it comes to complex domains. Identifying these KPIs and providing the AI with a training dataset of this processed data will again take you back into the anomaly detection territory where the AI really can do magic.
 
+#Use cases
+There are an endless list of use cases for anomaly detection and here are some examples:
+
+* Detecting fraudulent transactions in real time. This is something AmEx is doing very well with millions of transaction analyses per second
+* Electricity consumption for buildings
+* CPU usage
+* Transaction volumes in business or IT systems
+* Web page views
+* Average order value
+* Foot traffic into a building
+* Temperature in room
+* Vibrations from manufacturing machine
+* Network traffic
+* Recorded sound
+
+
 # Summary 
 Now you know a little more about anomaly detection, use cases and some pitfalls. As usual it all comes down to the use case: what are we looking for, what data can we use and who wants to know about the results. Happy anomaly hunting!
 
