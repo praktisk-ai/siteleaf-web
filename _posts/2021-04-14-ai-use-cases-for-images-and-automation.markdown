@@ -18,13 +18,16 @@ However, let us get back the previous discussion about correctness. If you have 
 In this case the AI would do the bulk of the work and look at all images. For those it was extremely sure about, flawless if  below 40, and flawed if above 60, the human ie you would not need to do anything. You would only be required to take a decision when it comes to the (hopefully) few remaining images the AI could not make a clear decision about. This is the real gain in this use case - automation. Even for an initial simple and non-perfect AI model this would probably save you tons of manual work. Then when you learn what the AI has problems with, you can start collecting those images and retrain your AI to become even better, further reducing your workload. Sounds nice right?!
 
 This use case is so common that AWS even provides a specialized service for it: Lookout for Vision. 
-Read more about here: http://praktisk.ai/posts/aws-lookout-for-vision-goes-ga/
+
+Read more about here: [AWS Lookout for Vision](http://praktisk.ai/posts/aws-lookout-for-vision-goes-ga/)
+
 
 # Looking at graphs
-Just as in the previous example a human can also look at a graph of some vital measure and decide if there is a problem. But with 100sd or 1000s of graphs to go through this is not feasible to do in a timely fashion for a human workforce. An AI will do this for you, tirelessly and 24/7 and report any found potential anomalies for humans to take a closer look at. This is also an automation made possible by AI, but that also does not require a 100% perfect accuracy.
 
-Also see smart buildings blog.
-https://praktisk.ai/posts/smart-buildings-with-ai/
+Just as in the previous example a human can also look at a graph of some vital measure and decide if there is a problem. But with 100s or 1000s of graphs to go through this is not feasible to do in a timely fashion for a human workforce. An AI will do this for you, tirelessly and 24/7 and report any found potential anomalies for humans to take a closer look at. This is also an automation made possible by AI, but that also does not require a 100% perfect accuracy.
+
+Also see this article about [Smart buildings with AI](https://praktisk.ai/posts/smart-buildings-with-ai/).
+
 
 
 # Counting and other hobbies
