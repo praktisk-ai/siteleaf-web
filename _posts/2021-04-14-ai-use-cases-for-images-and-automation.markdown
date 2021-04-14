@@ -1,6 +1,7 @@
 ---
 title: AI use cases for images and automation
 date: 2021-04-14 14:58:00 +02:00
+image: "/uploads/robot-fingers.jpeg"
 ---
 
 In this article I will discuss AI solutions based on images, automation and the value of non-perfect models. I will include some important considerations for your AI projects, how to think and what to focus on both regarding effort and ethics. I will use a few different use cases to illustrate my points and hopefully this will get your inspirational juices flowing. 
