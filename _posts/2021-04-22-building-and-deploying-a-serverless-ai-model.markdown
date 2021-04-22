@@ -245,4 +245,6 @@ So now you have some simple code to expand further and continue to build from if
 No more excuses for not deploying your cool models! Just do it!
 
 
-Torbjörn Stavenek
+
+*Torbjörn Stavenek* - 
+[LinkedIn Profile](https://www.linkedin.com/in/tstavenek/)
