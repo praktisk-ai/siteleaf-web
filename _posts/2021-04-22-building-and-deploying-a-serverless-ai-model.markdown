@@ -21,48 +21,33 @@ Google Colab is an excellent free service useful for all sorts of AI things, but
     df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))`
 
 
-`
-import pandas as pd
-df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') 
-df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))
-`
-
-> import pandas as pd
->
->df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') 
->
->df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))
-
 
 Now we create a simple linear regression based on this dataset and draw the regression line through our data.
 
-`import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
+    import matplotlib.pyplot as plt
+    from sklearn.linear_model import LinearRegression
 
-X = df[['Gr Liv Area']]
-y = df['SalePrice']
-model = LinearRegression().fit(X, y) 
+    X = df[['Gr Liv Area']]
+    y = df['SalePrice']
+    model = LinearRegression().fit(X, y) 
 
-plt.figure(figsize=(20,5))
-plt.scatter(X, y,color='g', alpha=0.3)
-plt.plot(X, model.predict(X),color='k')
-plt.show()`
+    plt.scatter(X, y,color='g', alpha=0.3)
+    plt.plot(X, model.predict(X),color='k')
+    plt.show()
 
 Image house-2
 
 We use our new model to predict a value
 
-\`
-model.predict(\[\[2000\]\])
-
-236677\.63608036
-\`
+    model.predict([[2000]])
+    236677.63608036
 
 This looks reasonable if we also look at this in the images above. Time to save the model to a file. For this we use pickle.
 
-`import pickle pickle.dump(model, open('model.pkl', 'wb'))`
+    import pickle pickle.dump(model, open('model.pkl', 'wb'))
 
 We can now download the created file from Colab to our local computer. Later on we will upload this model to the cloud providers, but for now we will leave it.
+
 
 # Deploying the model on AWS
 
@@ -70,7 +55,9 @@ Our first deployment will be AWS so you will obviously need to sign up for an ac
 
 We will use S3 to store our model so we need to create a bucket and then upload our model.
 
-`aws s3 mb s3://lab-ai-sls-model aws s3 cp ~/Downloads/model.pkl s3://lab-ai-sls-model`
+    aws s3 mb s3://lab-ai-sls-model 
+    aws s3 cp ~/Downloads/model.pkl s3://lab-ai-sls-model
+
 
 # Serving the model from AWS
 
@@ -78,96 +65,93 @@ Now the time has come to deploy the serving infrastructure. For this step we wil
 
 First we need some simple Python code to load the model, read the incoming parameter (the floor space) and then run the inference.
 
-\`
-import json
-import boto3
-import pickle
-from sklearn.linear_model import LinearRegression
 
-def run_inference(event, context):
-area = int(event\['queryStringParameters'\]\['a'\])
+    import json
+    import boto3
+    import pickle
+    from sklearn.linear_model import LinearRegression
 
-s3 = boto3.resource('s3')
-data = s3.Bucket("lab-ai-sls-model").Object("model.pkl").get()\['Body'\].read()
-model = pickle.loads(data)
+    def run_inference(event, context):
+        area = int(event['queryStringParameters']['a'])
 
-predicted_price = model.predict(\[\[area\]\])\[0\]
-print(predicted_price)
+        s3 = boto3.resource('s3')
+        data = s3.Bucket("lab-ai-sls-model").Object("model.pkl").get()['Body'].read()
+        model = pickle.loads(data)
 
-body = {
-"area": area,
-"predicted_price": predicted_price,
-}
+        predicted_price = model.predict([[area]])[0]
 
-response = {
-"statusCode": 200,
-"body": json.dumps(body)
-}
+        body = {
+            "area": area,
+            "predicted_price": predicted_price,
+        }
 
-return response
+        response = {
+            "statusCode": 200,
+            "body": json.dumps(body)
+        }
 
-Serverless Framework also needs a configuration file.
+    return response
 
-service: ai-sls-py-simple
 
-provider:
-name: aws
-runtime: python3.7
-region: eu-west-1
+Serverless Framework also needs a configuration file serverless.yaml:
 
-iam:
-role:
-statements:
 
-* Effect: "Allow"
-  Action:
-
-* "s3:Get\*"
-  Resource: "arn:aws:s3:::lab-ai-sls-model/\*"
-
-functions:
-run_inference:
-handler: handler.run_inference
-events:
-
-* httpApi:
-  path: /run
-  method: get
-
-plugins:
-
-* serverless-python-requirements
-
-custom:
-pythonRequirements:
-dockerizePip: non-linux
-\`
+    service: ai-sls-py-simple
+    
+    provider:
+      name: aws
+      runtime: python3.7
+      lambdaHashingVersion: 20201221
+      region: eu-west-1
+    
+      iam:
+        role:
+          statements:
+          - Effect: "Allow"
+            Action:
+              - "s3:Get*"
+            Resource: "arn:aws:s3:::lab-ai-sls-model-dir/*"
+    
+    functions:
+      run_inference:
+        handler: handler.run_inference
+        events:
+          - httpApi:
+              path: /run
+              method: get
+    
+    plugins:
+      - serverless-python-requirements
+    
+    custom:
+      pythonRequirements:
+        dockerizePip: non-linux
 
 We also need to specify our dependencies in a file called requirements.txt:
 
-`pickle5 scikit-learn==0.22.2.post1`
+    pickle5 scikit-learn==0.22.2.post1
 
 Now all we need to do is deploy it.
 
-\`
-sls deploy
 
-…
-endpoints:
-GET - https://aaa.execute-api.eu-west-1.amazonaws.com/run
-...
-\`
+    sls deploy
+
+    ...
+    endpoints:
+    GET - https://aaa.execute-api.eu-west-1.amazonaws.com/run
+    ...
+
 
 That’s it! Really! Now let us use this model by visiting the URL that sls displayed .
 
-\`
-curl  "https://4h5hatxm9h.execute-api.eu-west-1.amazonaws.com/run?a=2000"
 
-{
-"area": 2000,
-"predicted_price": 236677.63608036027
-}
-\`
+    curl  "https://4h5hatxm9h.execute-api.eu-west-1.amazonaws.com/run?a=2000"
+
+    {
+      "area": 2000,
+      "predicted_price": 236677.63608036027
+    }
+
 
 Looks like it is the same value as we got in Colab, so we know the model loaded correctly and the inference seems to be working!
 
