@@ -17,13 +17,17 @@ Google Colab is an excellent free service useful for all sorts of AI things, but
 
 ``
 import pandas as pd
-df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))`
+
+df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') 
+
+df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))`
 ``
 
 `
 import pandas as pd
 
 df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') 
+
 df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))
 `
 
