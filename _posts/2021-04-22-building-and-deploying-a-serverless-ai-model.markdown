@@ -44,7 +44,8 @@ We use our new model to predict a value
 
 This looks reasonable if we also look at this in the images above. Time to save the model to a file. For this we use pickle.
 
-    import pickle pickle.dump(model, open('model.pkl', 'wb'))
+    import pickle 
+    pickle.dump(model, open('model.pkl', 'wb'))
 
 We can now download the created file from Colab to our local computer. Later on we will upload this model to the cloud providers, but for now we will leave it.
 
@@ -54,6 +55,7 @@ We can now download the created file from Colab to our local computer. Later on 
 Our first deployment will be AWS so you will obviously need to sign up for an account. You also need the CLI tool “awscli” and some credentials. But this you can read about in the AWS documentation.
 
 We will use S3 to store our model so we need to create a bucket and then upload our model.
+
 
     aws s3 mb s3://lab-ai-sls-model 
     aws s3 cp ~/Downloads/model.pkl s3://lab-ai-sls-model
@@ -127,9 +129,13 @@ Serverless Framework also needs a configuration file serverless.yaml:
       pythonRequirements:
         dockerizePip: non-linux
 
+
 We also need to specify our dependencies in a file called requirements.txt:
 
-    pickle5 scikit-learn==0.22.2.post1
+
+    pickle5 
+    scikit-learn==0.22.2.post1
+
 
 Now all we need to do is deploy it.
 
@@ -145,7 +151,7 @@ Now all we need to do is deploy it.
 That’s it! Really! Now let us use this model by visiting the URL that sls displayed .
 
 
-    curl  "https://4h5hatxm9h.execute-api.eu-west-1.amazonaws.com/run?a=2000"
+    curl  "https://aaa.execute-api.eu-west-1.amazonaws.com/run?a=2000"
 
     {
       "area": 2000,
@@ -155,70 +161,76 @@ That’s it! Really! Now let us use this model by visiting the URL that sls disp
 
 Looks like it is the same value as we got in Colab, so we know the model loaded correctly and the inference seems to be working!
 
+
 # Deploying the model on GCP
 
 This time we will do the same thing but on the Google Cloud Platform (GCP). Here too you will need to create an account, install the CLI tool (gcloud and gsutil) and get some CLI credentials.
 
 In GCP we will use Cloud Storage to store our model. We create a bucket and upload the model.
 
-gsutil mb gs://tobbe-ml-lab
-gsutil cp \~/Downloads/model.pkl gs://tobbe-ml-lab
+    gsutil mb gs://tobbe-ml-lab
+    gsutil cp ~/Downloads/model.pkl gs://tobbe-ml-lab
+
 
 # Serving the model from GCP
 
 Creating the infrastructure on GCP is even simpler than on AWS for these kinds of labs. We need the Python code for the handler and you can see it is almost identical.
 
-\`
-import json
-import pickle
-from sklearn.linear_model import LinearRegression
-from google.cloud import storage
-from flask import jsonify
 
-def download_blob(bucket_name, source_blob_name, destination_file_name):
-storage_client = storage.Client()
-bucket = storage_client.get_bucket(bucket_name)
-blob = bucket.blob(source_blob_name)
-blob.download_to_filename(destination_file_name)
+    import json
+    import pickle
+    from sklearn.linear_model import LinearRegression
+    from google.cloud import storage
+    from flask import jsonify
+    
+    def download_blob(bucket_name, source_blob_name, destination_file_name):
+        storage_client = storage.Client()
+        bucket = storage_client.get_bucket(bucket_name)
+        blob = bucket.blob(source_blob_name)
+        blob.download_to_filename(destination_file_name)
+    
+    def run_inference(request):
+        area = int(request.args.get('a'))
+    
+        download_blob('tobbe-ml-lab', 'model.pkl', '/tmp/model.pkl')
+        model = pickle.load(open('/tmp/model.pkl', 'rb'))
+    
+        predicted_price = model.predict([[area]])[0]
+        print(predicted_price)
+    
+        body = {
+            "area": area,
+            "predicted_price": predicted_price,
+        }
+    
+        return jsonify(body)
 
-def run_inference(request):
-area = int(request.args.get('a'))
-
-download_blob('tobbe-ml-lab', 'model.pkl', '/tmp/model.pkl')
-model = pickle.load(open('/tmp/model.pkl', 'rb'))
-
-predicted_price = model.predict(\[\[area\]\])\[0\]
-print(predicted_price)
-
-body = {
-"area": area,
-"predicted_price": predicted_price,
-}
-
-return jsonify(body)
-\`
 
 We also need to specify our dependencies in a file called requirements.txt:
 
-`pickle5 flask scikit-learn==0.22.2.post1 google-cloud-storage==1.16.1`
+    pickle5 
+    flask 
+    scikit-learn==0.22.2.post1 
+    google-cloud-storage==1.16.1
 
 Now we only need to deploy the cloud function.
 
-\`
-gcloud functions deploy run_inference --runtime python37 --trigger-http --source=py_source \
---allow-unauthenticated --verbosity=info --region=europe-west1
 
-...
-entryPoint: run_inference
-httpsTrigger:
-securityLevel: SECURE_OPTIONAL
-url: https://europe-west1-aaa.cloudfunctions.net/run_inference
-...
-\`
+    gcloud functions deploy run_inference --runtime python37 --trigger-http --source=py_source \
+    --allow-unauthenticated --verbosity=info --region=europe-west1
+
+    ...
+    entryPoint: run_inference
+    httpsTrigger:
+    securityLevel: SECURE_OPTIONAL
+    url: https://europe-west1-aaa.cloudfunctions.net/run_inference
+    ...
+
 
 … and we are done! Let us call the inference endpoint to see what happens.
 
-`curl "https://europe-west1-aaa.cloudfunctions.net/run_inference?a=2000" {"area":2000,"predicted_price":236677.63608036027}`
+    curl "https://europe-west1-aaa.cloudfunctions.net/run_inference?a=2000"         
+    {"area":2000,"predicted_price":236677.63608036027}`
 
 Looking good right?!
 
@@ -231,5 +243,6 @@ Note that deploying on serverless comes with some constraints based on the serve
 So now you have some simple code to expand further and continue to build from if you want to start out small and just test some AI-serverless thingies.
 
 No more excuses for not deploying your cool models! Just do it!
+
 
 Torbjörn Stavenek
