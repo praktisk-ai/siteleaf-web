@@ -1,6 +1,7 @@
 ---
 title: Building and deploying a serverless AI model
 date: 2021-04-22 14:28:00 +02:00
+image: "/uploads/cloud-rainbow.jpg"
 ---
 
 Let me take you on a little journey. An adventure. We will create a small AI model from scratch and then deploy it serverless in the cloud. This article will be slightly technical but the amount of code is quite small.I will show you all the steps required to go from an EDA (Exploratory Data Analysis)  on Google Colab to serving a deployed AI model with AWS Lambda and Google Cloud Functions. Of course there are many other options for deploying your models, but this barebones solution shows you what is actually happening and that there is nothing magic going on. As you will see, it is quite simple! Let us begin our journey!
