@@ -15,16 +15,23 @@ The image above shows the final result we will achieve and also the actions to g
 
 Google Colab is an excellent free service useful for all sorts of AI things, but particularly loading a dataset and creating a quick model. So this is what we will do here. We load a housing dataset and predict the sales price based on a single parameter (the ground floor space) because it will be easier to visualize and because the main point here is the bigger picture.
 
-`import pandas as pd
+``
+import pandas as pd
 df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))`
+``
 
 `
 import pandas as pd
-df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))
+
+df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') 
+df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))
 `
 
 > import pandas as pd
->df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') >df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))
+>
+>df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') 
+>
+>df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))
 
 
 Now we create a simple linear regression based on this dataset and draw the regression line through our data.
