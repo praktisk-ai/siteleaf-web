@@ -20,7 +20,7 @@ Google Colab is an excellent free service useful for all sorts of AI things, but
     df = pd.read_csv('http://jse.amstat.org/v19n3/decock/AmesHousing.txt', sep='\t') 
     df.plot.scatter(x='Gr Liv Area', y='SalePrice', figsize=(20,5))`
 
-
+![house-1.png](/uploads/house-1.png)
 
 Now we create a simple linear regression based on this dataset and draw the regression line through our data.
 
@@ -35,7 +35,7 @@ Now we create a simple linear regression based on this dataset and draw the regr
     plt.plot(X, model.predict(X),color='k')
     plt.show()
 
-Image house-2
+![house-2.png](/uploads/house-2.png)
 
 We use our new model to predict a value
 
