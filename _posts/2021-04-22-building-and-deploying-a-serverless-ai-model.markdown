@@ -14,7 +14,7 @@ The image above shows the final result we will achieve and also the actions to g
 
 # Creating the model
 
-Google Colab is an excellent free service useful for all sorts of AI things, but particularly loading a dataset and creating a quick model. So this is what we will do here. We load a housing dataset and predict the sales price based on a single parameter (the ground floor space) because it will be easier to visualize and because the main point here is the bigger picture.
+Google Colab is an excellent free service useful for all sorts of AI things, but particularly loading a dataset and creating a quick model. So this is what we will do here. We load a housing dataset and predict the sales price based on a single parameter (the ground floor space) because it will be easier to visualize and because the main point here is the bigger picture and the workflow.
 
 
     import pandas as pd
