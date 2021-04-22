@@ -48,7 +48,7 @@ This looks reasonable if we also look at this in the images above. Time to save 
     import pickle 
     pickle.dump(model, open('model.pkl', 'wb'))
 
-We can now download the created file from Colab to our local computer. Later on we will upload this model to the cloud providers, but for now we will leave it.
+We can now download the file containing our model from Colab to our local computer. The next step is to upload this model file to the cloud providers.
 
 
 # Deploying the model on AWS
