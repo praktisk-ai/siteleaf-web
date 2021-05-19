@@ -1,6 +1,7 @@
 ---
 title: Chickens, Eggs and the Darts library for time series
 date: 2021-05-19 21:11:00 +02:00
+image: "/uploads/egg-ring.jpeg"
 ---
 
 I have some chickens: 6 hens and 2 roosters. So I get a lot of eggs. I have written down how many eggs I get every day for some time now to see if there are any patterns in the production.
@@ -25,7 +26,7 @@ df['Day'] = pd.date_range(start='2021-01-01', periods=len(egg_data))
 print(df)
 df.plot(x='Day', figsize=(15,5))
 
-
+![Skärmavbild 2021-05-19 kl. 20.45.01.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.45.01.png)
 
 
 Now import into a darts object:
@@ -43,6 +44,7 @@ train.plot(label='training')
 val.plot(label='validation')
 plt.legend()
 
+![Skärmavbild 2021-05-19 kl. 20.48.20.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.48.20.png)
 
 
 # Baseline
@@ -61,7 +63,7 @@ q = pd.DataFrame(val.values(), columns=['val'])
 q.plot(figsize=(20,5))
 plt.axhline(avg, color='r')
 
-
+![Skärmavbild 2021-05-19 kl. 20.51.30.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.51.30.png)
 
 
 But it seems a bit strange to make a guess of non-whole eggs, so we round it down to 2. Then we get this.
@@ -73,6 +75,8 @@ print(avg, m_mae)
 2 [0.61904762]
 
 
+![Skärmavbild 2021-05-19 kl. 20.54.22.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.54.22.png)
+
 Which is actually better than the “decimal guess”, now the model guess only 0.62 eggs wrong for a particular day!
 
 # More advanced stuff
@@ -80,6 +84,9 @@ Which is actually better than the “decimal guess”, now the model guess only 
 Let us first take a look at the auto-correlation between the datapoints (ie eggs per day).
 
 plot_acf(train)
+
+
+![Skärmavbild 2021-05-19 kl. 20.56.55.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.56.55.png)
 
 We see that we have a strong correlation with day 0 since this is what we compare to. Otherwise most obvious is the strong negative correlation with the previous day. This seems logical - if there were many eggs on day 1 then there should be less eggs the next day, and vice versa.
 
@@ -128,7 +135,7 @@ Prophet [34.53034244] [90] 0.38367047160114776 [0.82215101]
 Auto-ARIMA [31.6753797] [90] 0.3519486633090237 [0.75417571]
 
 
-
+![Skärmavbild 2021-05-19 kl. 21.01.15.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2021.01.15.png)
 
 The most interesting thing here is that none of these basic statistically based models could beat our baseline! The best model was “Exponential smoothing” which had an MAE of 0.63 but that is still worse than our baseline. 
 
