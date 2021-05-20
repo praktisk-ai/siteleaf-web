@@ -1,11 +1,11 @@
 ---
-title: Chickens, Eggs and the Darts library for time series
+title: Eggs, baselines and the Darts library for time series
 date: 2021-05-19 21:11:00 +02:00
 image: "/uploads/egg-ring.jpeg"
 ---
 
 I have some chickens: 6 hens and 2 roosters. So I get a lot of eggs. I have written down how many eggs I get every day for some time now to see if there are any patterns in the production.
-In this article I will look at the value of a baseline for your AI problem as well as take a quick look at the Darts library.
+In this article I will look at the value of a baseline for your AI problem as well as taking a quick look at the Darts library.
 
 
 # Importing data
