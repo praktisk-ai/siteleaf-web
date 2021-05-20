@@ -144,3 +144,8 @@ The most interesting thing here is that **none** of these basic statistically ba
 This article did a quick exploratory data analysis (EDA) on some egg data using the darts library. We learned that we should always start with a baseline to get a feeling for what our more advanced and time consuming algorithms must beat in terms of accuracy.
   
 In this case and with this data, if we want good results we need to look into more sophisticated algorithms. But that is a topic for another article. 
+
+
+
+*Torbjörn Stavenek* - 
+[LinkedIn Profile](https://www.linkedin.com/in/tstavenek/)
