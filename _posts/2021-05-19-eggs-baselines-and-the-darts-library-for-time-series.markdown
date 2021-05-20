@@ -88,7 +88,7 @@ Let us first take a look at the auto-correlation between the datapoints (ie eggs
 
 ![Skärmavbild 2021-05-19 kl. 20.56.55.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.56.55.png)
 
-We see that we have a strong correlation with day 0 since this is what we compare to. Otherwise most obvious is the strong negative correlation with the previous day. This seems logical - if there were many eggs on day 1 then there should be less eggs the next day, and vice versa.
+We see that we have a strong correlation with day 0 since this is what we compare to. Otherwise most obvious is the negative correlation with the previous day. This seems logical - if there were many eggs on day 1 then there should be less eggs the next day, and vice versa. However, this negative correlation is not very strong and will probably not provide any prediction power. 
 
 We can also run a statistical check of seasonality for each candidate period m.
 
