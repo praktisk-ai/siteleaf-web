@@ -49,7 +49,7 @@ Split the time series into separate datasets for training and validation. We use
 
 # Baseline
 
-Now let us create a baseline. What is a baseline? Well it is the most basic prediction you can do that you then try to beat with your mlore advanced algorithms. Here we will use the average and calculate the Mean Average Error (MAE).
+Now let us create a baseline. What is a baseline? Well it is the most basic prediction you can do that you then try to beat with your more advanced algorithms. Here we will use the average and calculate the Mean Average Error (MAE).
 
     avg = train.mean().values[0]
     m_mae = sum(abs(val.values() - avg)) / len(val)
