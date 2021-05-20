@@ -108,7 +108,7 @@ We can also run a statistical check of seasonality for each candidate period m.
     There is seasonality of order 21.
 
 Hmm. Seasonality all over the place, which is actually most indicative of NO seasonality.
-However, let us run a few different models. Note that the evaluation metric cannot be simple naive MAPE (Mean Average Percentage Error) since we have zeros in the data. We need to calculate this with a small variation that works on all errors together to avoid the zero-problem. First we add up **all** the errors, then we add up **all** the expected values and only after this do we calculate the MAPE by dividing the two numbers.
+However, let us run a few different models. Note that the evaluation metric cannot be simple naive MAPE (Mean Average Percentage Error) since we have zeros in the data. We need to calculate this with a small variation that works on all errors together to avoid the zero-problem. First we add up **all** the errors, then we add up **all** the expected values and only after this do we calculate the MAPE by dividing the two numbers. We also calculate the MAE (Mean Absolute Error) to get the number of eggs the model guessed wrong on average.
 
     def eval_model(model):
        model.fit(train)
@@ -137,10 +137,10 @@ However, let us run a few different models. Note that the evaluation metric cann
 
 ![Skärmavbild 2021-05-19 kl. 21.01.15.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2021.01.15.png)
 
-The most interesting thing here is that none of these basic statistically based models could beat our baseline! The best model was “Exponential smoothing” which had an MAE of 0.63 but that is still worse than our baseline. 
+The most interesting thing here is that **none** of these basic statistically based models could beat our baseline! The best model was “Exponential smoothing” which had an MAE of 0.63 but that is still worse than our baseline.  
 
 
 # Summary
 This article did a quick exploratory data analysis (EDA) on some egg data using the darts library. We learned that we should always start with a baseline to get a feeling for what our more advanced and time consuming algorithms must beat in terms of accuracy.
   
-So if we want good results for this data we need to look into more sophisticated algorithms. But that is a topic for another article. 
+In this case and with this data, if we want good results we need to look into more sophisticated algorithms. But that is a topic for another article. 
