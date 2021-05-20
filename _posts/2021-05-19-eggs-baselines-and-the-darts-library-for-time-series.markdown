@@ -108,7 +108,7 @@ We can also run a statistical check of seasonality for each candidate period m.
     There is seasonality of order 21.
 
 Hmm. Seasonality all over the place, which is actually most indicative of NO seasonality.
-However, let us run a few different models. Note that the evaluation metric cannot be simple naive MAPE since we have zeros in the data. We need to perform variation on the calculation that works on all errors together to avoid the zero-problem.
+However, let us run a few different models. Note that the evaluation metric cannot be simple naive MAPE (Mean Average Percentage Error) since we have zeros in the data. We need to calculate this with a small variation that works on all errors together to avoid the zero-problem. First we add up **all** the errors, then we add up **all** the expected values and only after this do we calculate the MAPE by dividing the two numbers.
 
     def eval_model(model):
        model.fit(train)
