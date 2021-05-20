@@ -21,10 +21,10 @@ darts is a Python library for easy manipulation and forecasting of time series. 
 Import the data into a normal Pandas dataframe and plot it.
 
  
-df = pd.DataFrame(egg_data, columns=["Eggs"])
-df['Day'] = pd.date_range(start='2021-01-01', periods=len(egg_data))
-print(df)
-df.plot(x='Day', figsize=(15,5))
+  df = pd.DataFrame(egg_data, columns=["Eggs"])
+  df['Day'] = pd.date_range(start='2021-01-01', periods=len(egg_data))
+  print(df)
+  df.plot(x='Day', figsize=(15,5))
 
 ![Skärmavbild 2021-05-19 kl. 20.45.01.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.45.01.png)
 
