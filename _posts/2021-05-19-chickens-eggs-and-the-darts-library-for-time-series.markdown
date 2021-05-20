@@ -32,17 +32,17 @@ Import the data into a normal Pandas dataframe and plot it.
 Now import into a darts object:
 
  
-series = TimeSeries.from_dataframe(df, 'Day', ['Eggs'])
-series.plot()
+    series = TimeSeries.from_dataframe(df, 'Day', ['Eggs'])
+    series.plot()
 
 
 Split the time series into separate datasets for training and validation. We use 70% for training.
 
-split_day = df.Day.iloc[round(len(df.Day) * 0.70)]
-train, val = series.split_before(split_day)
-train.plot(label='training')
-val.plot(label='validation')
-plt.legend()
+    split_day = df.Day.iloc[round(len(df.Day) * 0.70)]
+    train, val = series.split_before(split_day)
+    train.plot(label='training')
+    val.plot(label='validation')
+    plt.legend()
 
 ![Skärmavbild 2021-05-19 kl. 20.48.20.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.48.20.png)
 
@@ -51,28 +51,28 @@ plt.legend()
 
 Now let us create a baseline. What is a baseline? Well it is the most basic prediction you can do that you then try to beat with your mlore advanced algorithms. Here we will use the average and calculate the Mean Average Error (MAE).
 
-avg = train.mean().values[0]
-m_mae = sum(abs(val.values() - avg)) / len(val)
-print(avg, m_mae)
+    avg = train.mean().values[0]
+    m_mae = sum(abs(val.values() - avg)) / len(val)
+    print(avg, m_mae)
 
-2.4183673469387754 [0.7585034]
+    2.4183673469387754 [0.7585034]
 
 So we can see that guessing the average number of eggs per day based on the training data, 2.4, we get an error on average of 0.8 eggs.
 
-q = pd.DataFrame(val.values(), columns=['val'])
-q.plot(figsize=(20,5))
-plt.axhline(avg, color='r')
+    q = pd.DataFrame(val.values(), columns=['val'])
+    q.plot(figsize=(20,5))
+    plt.axhline(avg, color='r')
 
 ![Skärmavbild 2021-05-19 kl. 20.51.30.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.51.30.png)
 
 
 But it seems a bit strange to make a guess of non-whole eggs, so we round it down to 2. Then we get this.
 
-avg = round(train.mean().values[0])
-m_mae = sum(abs(val.values() - avg)) / len(val)
-print(avg, m_mae)
+    avg = round(train.mean().values[0])
+    m_mae = sum(abs(val.values() - avg)) / len(val)
+    print(avg, m_mae)
 
-2 [0.61904762]
+    2 [0.61904762]
 
 
 ![Skärmavbild 2021-05-19 kl. 20.54.22.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.54.22.png)
@@ -83,7 +83,7 @@ Which is actually better than the “decimal guess”, now the model guess only 
 
 Let us first take a look at the auto-correlation between the datapoints (ie eggs per day).
 
-plot_acf(train)
+    plot_acf(train)
 
 
 ![Skärmavbild 2021-05-19 kl. 20.56.55.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2020.56.55.png)
@@ -92,47 +92,47 @@ We see that we have a strong correlation with day 0 since this is what we compar
 
 We can also run a statistical check of seasonality for each candidate period m.
 
-for m in range(2, 25):
-   is_seasonal, period = check_seasonality(train, m=m, alpha=.05)
-   if is_seasonal:
-       print('There is seasonality of order {}.'.format(period))
+    for m in range(2, 25):
+       is_seasonal, period = check_seasonality(train, m=m, alpha=.05)
+       if is_seasonal:
+           print('There is seasonality of order {}.'.format(period))
 
-There is seasonality of order 2.
-There is seasonality of order 4.
-There is seasonality of order 7.
-There is seasonality of order 9.
-There is seasonality of order 12.
-There is seasonality of order 14.
-There is seasonality of order 17.
-There is seasonality of order 19.
-There is seasonality of order 21.
+    There is seasonality of order 2.
+    There is seasonality of order 4.
+    There is seasonality of order 7.
+    There is seasonality of order 9.
+    There is seasonality of order 12.
+    There is seasonality of order 14.
+    There is seasonality of order 17.
+    There is seasonality of order 19.
+    There is seasonality of order 21.
 
 Hmm. Seasonality all over the place, which is actually most indicative of NO seasonality.
 However, let us run a few different models. Note that the evaluation metric cannot be simple naive MAPE since we have zeros in the data. We need to perform variation on the calculation that works on all errors together to avoid the zero-problem.
 
-def eval_model(model):
-   model.fit(train)
-   forecast = model.predict(len(val))
+    def eval_model(model):
+       model.fit(train)
+       forecast = model.predict(len(val))
  
-   total_err = sum(abs(forecast.values() - val.values() ))
-   total_actual = sum(val.values())
-   mape =  sum(total_err/total_actual)
-   mae = total_err / len(val)
-   print(model,  total_err, total_actual, mape, mae)
+       total_err = sum(abs(forecast.values() - val.values() ))
+       total_actual = sum(val.values())
+       mape =  sum(total_err/total_actual)
+       mae = total_err / len(val)
+       print(model,  total_err, total_actual, mape, mae)
+     
+       q = pd.DataFrame(val.values(), columns=[str(model) + ': val'])
+       q['pred'] = forecast.values()
+       q.plot(figsize=(20,5))
  
-   q = pd.DataFrame(val.values(), columns=[str(model) + ': val'])
-   q['pred'] = forecast.values()
-   q.plot(figsize=(20,5))
  
- 
-eval_model(ExponentialSmoothing())
-eval_model(Prophet())
-eval_model(AutoARIMA())
+    eval_model(ExponentialSmoothing())
+    eval_model(Prophet())
+    eval_model(AutoARIMA())
 
 
-Exponential smoothing [26.55093084] [90] 0.2950103426938217 [0.63216502]
-Prophet [34.53034244] [90] 0.38367047160114776 [0.82215101]
-Auto-ARIMA [31.6753797] [90] 0.3519486633090237 [0.75417571]
+    Exponential smoothing [26.55093084] [90] 0.2950103426938217 [0.63216502]
+    Prophet [34.53034244] [90] 0.38367047160114776 [0.82215101]
+    Auto-ARIMA [31.6753797] [90] 0.3519486633090237 [0.75417571]
 
 
 ![Skärmavbild 2021-05-19 kl. 21.01.15.png](/uploads/Ska%CC%88rmavbild%202021-05-19%20kl.%2021.01.15.png)
